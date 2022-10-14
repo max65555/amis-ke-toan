@@ -1,0 +1,33 @@
+* {
+	font-family: roboto regular fonts;
+}
+.container {
+	width: 100%;
+	display: flex;
+	/* flex: 1; */
+	padding-top: 120px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.btn {
+	border: unset;
+	padding: 0;
+	width: 112px;
+	height: 42px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn__icon {
+	width: 24px;
+	height: 24px;
+	background-image: url(../../assets/images/Sprites.64af8f61.svg);
+	background-repeat: no-repeat;
+	/* background-size:   */
+	background-size: 400px 400px;
+	background-position: -92px -133px;
+}
+.btn__text {
+}
