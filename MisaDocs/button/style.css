@@ -4,7 +4,11 @@
 }
 .button {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	flex-direction: row;
+	/* delete it */
+	margin: 0 18px 0 18px;
 }
 .btn {
 	padding: 0;
@@ -60,13 +64,89 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border: unset;
+	border-radius: 4px;
+	background-color: #50b83c1a;
 }
 
 .button__icon--image {
 	/* width: 20px;
 	height: 20px; */
 	/* flex: 1; */
-	width: 24px;
+	/* width: 24px;
 	height: 24px;
-	background: url(/assets/images/Sprites.64af8f61.svg) no-repeat -612px -898px;
+	background: url(/assets/images/Sprites.64af8f61.svg) no-repeat -612px -898px; */
+	width: 20px;
+	font-size: 20px;
+	color: #50b83c;
+	font-weight: 100;
+}
+/* button combobox */
+.button__combo-box {
+	background-color: white;
+	color: white;
+	display: flex;
+	align-items: center;
+	border: unset;
+	overflow: hidden;
+	border-radius: 4px;
+}
+.button__combo-box-text {
+	width: 41px;
+	height: 19px;
+	border: unset;
+	background-color: #50b83c;
+	padding: 8px 16px 9px 16px;
+}
+.button__combo-box-text--p {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 500;
+}
+.button__combo-box-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #50b83c;
+	padding: 10px 12px;
+	width: 16px;
+	height: 16px;
+	border-left: 1px white solid;
+}
+.button__combo-box-icon--image {
+	font-size: 16px;
+	color: white;
+	font-weight: 100;
+}
+/* button with icon */
+.button-with-icon {
+	width: 94px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	background-color: #50b83c;
+	border-radius: 4px;
+}
+.button-icon__part {
+	/* display: flex;
+	justify-content: center; */
+}
+.button-icon__icon {
+	width: 20px;
+	height: 20px;
+	padding: 9px 4px 7px 9px;
+}
+.button-icon__icon-font {
+	font-size: 20px;
+	color: #ffffff;
+}
+.button-icon__text {
+	width: 41px;
+	height: 19px;
+	padding: 9px 20px 9px 0px;
+}
+.button-icon__span-text {
+	font-size: 14px;
+	font-weight: 500;
+	color: #ffffff;
 }
