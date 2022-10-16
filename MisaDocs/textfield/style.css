@@ -1,0 +1,112 @@
+.container {
+	display: flex;
+	flex-direction: column;
+}
+.textfield {
+	margin: 20px;
+	max-width: 175px;
+}
+.text-field__normal {
+	/* box-sizing: content-box; */
+	/* width: 175px; */
+	display: flex;
+	flex-direction: column;
+}
+.normal-text-field__label {
+	/* width: 41px;
+	height: 11px; */
+	display: block;
+	margin-bottom: 8px;
+	width: auto;
+}
+.normal-text-field__label--text {
+	font-size: 14px;
+	font-weight: 500;
+	color: #1f1f1f;
+	width: auto;
+}
+.normal-text-field__input {
+	position: relative;
+	height: 24px;
+}
+.normal-text-field__input--text {
+	position: absolute;
+	top: 0;
+	box-sizing: border-box;
+	border-radius: 4px;
+	width: 260px;
+	height: 36px;
+	text-align: left;
+	font-size: 14px;
+	/* margin: 0; */
+	padding-left: 12px;
+	padding-right: 20px + 4px;
+	border: 1px solid #ebebeb;
+	outline: unset;
+}
+.normal-text-field__icon--result {
+	width: 16px;
+	height: 16px;
+	padding: 4px 6px 4px 6px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.normal-text-field__icon--icon {
+	font-size: 14px;
+}
+.normal-text-field__respond--text {
+	position: absolute;
+	top: 0;
+	text-align: left;
+	padding-top: 6px;
+	font-size: 7px;
+	font-weight: 400;
+	color: #e61d1d;
+}
+.normal-text-field__icon--result {
+	position: absolute;
+	right: 0;
+	/* top: 0; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.normal-text-field__icon--icon {
+	color: #50b83c;
+}
+/* search bar */
+.normal-text-field__icon--search {
+	width: 25px;
+	height: 22px;
+	padding: 4px 6px 4px 6px;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	border-radius: 0px 3px 3px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ebebeb;
+	box-sizing: border-box;
+}
+.normal-text-search-icon--icon {
+	color: #666666;
+	font-size: 12px;
+}
+/* status  */
+.text-field__normal:hover input.normal-text-field__input--text {
+	background-color: #f6f6f6;
+}
+.normal-text-field__input:focus {
+	border-color: #0c0c0c;
+}
+.normal-text-field__respond {
+	height: 8px;
+	/* overflow: hidden; */
+}
+.normal-text-field--disable .normal-text-field__input--text {
+	background-color: #ebebeb;
+	cursor: pointer;
+	color: #666666;
+}

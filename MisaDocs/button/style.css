@@ -15,9 +15,13 @@
 	margin: 0;
 	position: relative;
 }
+.btn:hover {
+	cursor: pointer;
+}
+
 /* main button  */
 .button__main {
-	width: 79px;
+	min-width: 80px;
 	height: 36px;
 	border-radius: 4px;
 	border: unset;
@@ -37,7 +41,7 @@
 .button__semi {
 	border: #e6e6e6 1px solid;
 	border-radius: 3px;
-	width: 73px;
+	min-width: 80px;
 	height: 36px;
 	background-color: #ffffff;
 }
@@ -51,6 +55,8 @@
 }
 /* link button */
 .button__link {
+	width: auto;
+	height: 36px;
 }
 .button__link--text {
 	font-size: 14px;
@@ -70,12 +76,6 @@
 }
 
 .button__icon--image {
-	/* width: 20px;
-	height: 20px; */
-	/* flex: 1; */
-	/* width: 24px;
-	height: 24px;
-	background: url(/assets/images/Sprites.64af8f61.svg) no-repeat -612px -898px; */
 	width: 20px;
 	font-size: 20px;
 	color: #50b83c;
@@ -83,20 +83,28 @@
 }
 /* button combobox */
 .button__combo-box {
-	background-color: white;
+	width: 133px;
+	height: 36px;
+	background-color: #50b83c;
 	color: white;
 	display: flex;
 	align-items: center;
 	border: unset;
 	overflow: hidden;
 	border-radius: 4px;
+	display: flex;
 }
 .button__combo-box-text {
 	width: 41px;
 	height: 19px;
+	height: 100%;
 	border: unset;
 	background-color: #50b83c;
-	padding: 8px 16px 9px 16px;
+	padding-right: 16px;
+	border-right: 1px solid white;
+	display: flex;
+	align-items: center;
+	text-align: left;
 }
 .button__combo-box-text--p {
 	margin: 0;
@@ -108,10 +116,9 @@
 	justify-content: center;
 	align-items: center;
 	background-color: #50b83c;
-	padding: 10px 12px;
+	padding: 0 12px;
 	width: 16px;
 	height: 16px;
-	border-left: 1px white solid;
 }
 .button__combo-box-icon--image {
 	font-size: 16px;
@@ -132,15 +139,21 @@
 	justify-content: center; */
 }
 .button-icon__icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 20px;
 	height: 20px;
-	padding: 9px 4px 7px 9px;
+	/* box-sizing: border-box; */
+	padding: 8px 4px 8px 12px;
 }
 .button-icon__icon-font {
-	font-size: 20px;
+	font-size: 14px;
 	color: #ffffff;
 }
 .button-icon__text {
+	display: flex;
+	align-items: center;
 	width: 41px;
 	height: 19px;
 	padding: 9px 20px 9px 0px;
@@ -149,4 +162,9 @@
 	font-size: 14px;
 	font-weight: 500;
 	color: #ffffff;
+}
+
+/* button statuses */
+.button--disable {
+	opacity: 56%;
 }
