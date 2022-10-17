@@ -1,0 +1,147 @@
+body {
+	background-color: #f5f5f5;
+}
+
+.container {
+	margin: 120px;
+}
+.date-picker-container {
+}
+.date-picker__button {
+	width: 140px;
+	height: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: white;
+	border-radius: 4px;
+	border: 1px solid #e0e1e4;
+	box-sizing: border-box;
+}
+.date-picker--date-format {
+	font-size: 14px;
+	margin-left: 12px;
+	text-align: left;
+	color: #212121;
+	font-weight: 400;
+}
+.date-picker__button-icon {
+	width: 24px;
+	height: 24px;
+	margin-right: 12px;
+	display: flex;
+	align-items: center;
+}
+
+.date-picker__i--calender-icon {
+	font-size: 18px;
+}
+.date-picker__top-part {
+	margin-top: 4px;
+	width: 320px;
+	height: 351px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	box-shadow: 0px 2px #0000000d 3px;
+}
+.date-picker__calendar {
+	padding: 24px;
+	padding-bottom: 0;
+}
+.date-picker__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 12px;
+}
+
+.date-picker__month-year {
+	display: flex;
+	align-items: center;
+}
+.date-picker__month-year--text {
+	font-size: 16px;
+	font-weight: 700;
+	color: #1d2634;
+}
+.date-picker__month-year--icon {
+	width: 25px;
+	height: 24px;
+	margin-left: 3px;
+	display: flex;
+	align-items: center;
+}
+
+.date-picker__month-year--down {
+	font-size: 20px;
+	color: #65696e;
+}
+.date-picker__switch-page {
+	display: flex;
+	align-items: center;
+}
+.date-picker__switch-page--icon {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+}
+.date-picker__switch-page--distance {
+	margin-right: 11px;
+}
+.date-picker__switch-page--down {
+	font-size: 24px;
+	color: #000000;
+}
+
+.date-picker__body {
+	/* width: 272px;
+	height: 232px; */
+	/* padding: 0 24px; */
+	margin-bottom: 8px;
+}
+.date-picker__body--a-line {
+	padding: 4px 0;
+	display: flex;
+}
+.date-picker__body--days-in-week {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	margin-right: 8px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #666666;
+	text-align: center;
+}
+.date-picker--days-in-month {
+	color: #1d2634;
+}
+/* .date-picker__body--days-in-month{
+    width:32px;
+    height:32px;
+    padding: 0 8px 0
+} */
+.date-picker__footer {
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid #ebebeb;
+	text-align: center;
+	box-sizing: border-box;
+}
+.date-picker__footer--text {
+	display: inline;
+	font-size: 14px;
+	font-weight: 500;
+	color: #50b83c;
+}
+/* status  */
+.date-picker--day-being-chosen {
+	border-radius: 50px;
+	color: #ffffff;
+	background-color: #50b83c;
+}
