@@ -1,0 +1,114 @@
+* {
+	font-size: 14px;
+}
+
+.data-table__wrapper {
+	border: 1px solid #e0e0e0;
+	width: 100%;
+	border-collapse: collapse;
+}
+.data-table__line {
+	height: 48px;
+	position: relative;
+}
+.data-table__header {
+	padding: 0 16px;
+	text-align: left;
+	border-bottom: 1px solid #e0e0e0;
+}
+.data-table__header-line {
+	background-color: #f5f5f5;
+	height: 48px;
+}
+.data-table__data-line {
+	text-align: left;
+	border-bottom: 1px solid #e0e0e0;
+	padding: 0 16px;
+}
+.data-table__header--checkbox {
+	padding-right: 0;
+}
+.data-table__header--input-checkbox {
+	width: 20px;
+	height: 20px;
+}
+.data-table__header-with-icon {
+	/* display: flex;
+	align-items: center;
+	height: 100%; */
+	display: flex;
+	align-items: center;
+}
+.data-table__header--icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+}
+.data-table__header--icon-down {
+	font-size: 20px;
+}
+.data-table__header-with-pic {
+	display: flex;
+	align-items: center;
+}
+.data-table__header-pic {
+	display: block;
+	width: 28px;
+	height: 28px;
+	background-color: #eeeeee;
+	border: 1px solid #e0e0e0;
+	box-sizing: border-box;
+	border-radius: 50%;
+	margin-right: 8px;
+}
+.data-table__footer-container {
+	height: 48px;
+}
+.data-table__footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 16px;
+}
+.data-table__footer--left {
+	display: flex;
+	align-items: center;
+}
+.data-table__footer--right {
+	display: flex;
+	align-items: center;
+}
+.data-table__footer--mount-of-line {
+}
+.data-table__footer--page {
+	display: flex;
+	align-items: center;
+	margin: 0 16px;
+}
+.data-table__footer--prev-next {
+	display: flex;
+	align-items: center;
+}
+.data-table__footer-nav-icon {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.data-table__footer-nav-rounded-left {
+	font-size: 20px;
+}
+.data-table__footer-nav-rounded-right {
+	font-size: 20px;
+}
+
+/* status   */
+.data-table__line:hover {
+	background-color: #f8f8f8;
+}
+.data-table__selected-row {
+	background-color: #f1ffef;
+}

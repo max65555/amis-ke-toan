@@ -13,27 +13,93 @@
 
 <body>
     <div class="container">
-        <div class="data-table__wrapper">
-            <div class="data-table__line">
-                <div class="data-table__selected-line">
-                    <input type="checkbox" name="" id=""  class="data-table__selected-line--check-box">
-                </div>
-                <div class="data-table__header">
-                    <span class="data-table__header--text">
-                        Header
-                    </span>
-                </div>
-                <div class="data-table__header">
-                    <span class="data-table__header--text">
-                        Header
-                    </span>
-                </div>
-                <div class="data-table__header">
-                    <span class="data-table__header--text">
-                        Header
-                    </span>
-                </div>
-            </div>
+        <div>
+            <table class="data-table__wrapper">
+                <tr class=" data-table__header-line">
+                    <th class="data-table__header data-table__header--checkbox">
+                        <input type="checkbox" name="" id="" class="data-table__header--input-checkbox">
+                    </th>
+                    <th class="data-table__header">
+                        <span class="data-table__header--text">
+                            header12
+                        </span>
+
+                    </th>
+                    <th class="data-table__header ">
+                        <div class="data-table__header-with-icon">
+                            <span class="data-table__header--text">
+                                header12
+                            </span>
+                            <div class="data-table__header--icon">
+                                <i class="icofont-rounded-down data-table__header--icon-down"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th class="data-table__header">
+                        header14
+                    </th>
+                    <th class="data-table__header">
+                        header15
+                    </th>
+                    <th class="data-table__header">
+                        header16
+                    </th>
+                </tr>
+                <tr class="data-table__line">
+                    <td class="data-table__data-line data-table__header--checkbox">
+                        <input type="checkbox" name="" id="" class="data-table__header--input-checkbox ">
+                    </td>
+                    <td class="data-table__data-line">
+                        <div class="data-table__header-with-pic">
+                            <span class="data-table__header-pic">
+                            </span>
+                            <span class="data-table__header--text">
+                                header12
+                            </span>
+                        </div>
+                    </td>
+                    <td class="data-table__data-line">
+                        test2
+                    </td>
+                    <td class="data-table__data-line">
+                        test14
+                    </td>
+                    <td class="data-table__data-line">
+                        test15
+                    </td>
+                    <td class="data-table__data-line">
+                        test16
+                    </td>
+                </tr>
+                <tr class="data-table__footer-container">
+                    <td colspan="6">
+                        <div class="data-table__footer">
+                            <div class="data-table__footer--left">
+                                <p>Tổng: &nbsp;</p>
+                                <b> &nbsp;4</b>
+                            </div>
+                            <div class="data-table__footer--right">
+                                <div class="data-table__footer--mount-of-line">
+                                    <p style="color:#666666">Số bản ghi/trang:</p>
+                                    <!-- drop down box -->
+                                </div>
+                                <div class="data-table__footer--page">
+                                    <span>1&nbsp;-&nbsp;4&nbsp;</span> <span style="color:#666666">bản ghi</span>
+                                </div>
+                                <div class="data-table__footer--prev-next">
+                                    <div class="data-table__footer-nav-icon" style="margin-right:16px">
+                                        <i class="icofont-rounded-left data-table__footer-nav-rounded-left"></i>
+                                    </div>
+                                    <div class="data-table__footer-nav-icon">
+                                        <i class="icofont-rounded-right data-table__footer-nav-rounded-left"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
         </div>
     </div>
 </body>
