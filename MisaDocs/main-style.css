@@ -15,13 +15,29 @@
 .sidebar {
 	background-color: #393a3d;
 	width: 200px;
-	height: 100vh; /* change it */
+	min-height: 100vh;
 }
 .main-wrapper {
 	/* background-color: yellow; */
-	width: 100%;
+	/* width: 100%; */
+	width: calc(100% - 200px);
+}
+td {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+}
+table {
+	display: block;
+	overflow-x: auto;
+	white-space: nowrap;
 }
 
+/* test */
+/* th,
+td {
+	white-space: nowrap;
+} */
 /* side bar */
 /* ///////////////// */
 /* --sidebar header */
@@ -150,8 +166,6 @@
 /* main content */
 /* //////////////// */
 .main-content {
-	/* width: 100%; */
-
 	background-color: #f4f5f7;
 	padding: 24px 24px 0 24px;
 }

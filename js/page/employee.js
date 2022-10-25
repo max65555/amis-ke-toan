@@ -7,6 +7,7 @@ $(document).ready(function () {
 	OpenFormAddNewEmployee();
 	SelectedRowInDataTable();
 	AddDropDownListShowUpEvent();
+	ShowAndHideSideBar();
 });
 /**
  * close employee addition form by clicking close button
@@ -60,5 +61,21 @@ function SelectedRowInDataTable() {
 function AddDropDownListShowUpEvent() {
 	$('.data-table_button-dropdown-edit').click(function () {
 		console.log($(this).children().eq(1));
+	});
+}
+/**
+ * scale up and down slide bar by
+ * Author: ToanLK (21/10/2022)
+ */
+function ShowAndHideSideBar() {
+	var sidebar = $('.sidebar');
+	$('.header__left-side-menu-container').click(function () {
+		if (sidebar.width() == 200) {
+			sidebar.css('width', '56px');
+			console.log('hide ');
+		} else if (sidebar.width() == 56) {
+			sidebar.css('width', '200px');
+			console.log('hide ');
+		}
 	});
 }

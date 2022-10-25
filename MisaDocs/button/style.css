@@ -165,3 +165,7 @@
 .button--disable {
 	opacity: 56%;
 }
+.btn:hover {
+	background-color: #5dc748;
+	color: red;
+}
