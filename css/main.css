@@ -9,3 +9,6 @@ body {
 	font-family: roboto regular fonts;
 	src: url(../assets/font/Roboto/Roboto-Regular.ttf);
 }
+.delete-it {
+	display: block;
+}

@@ -23,14 +23,38 @@ body {
 .sidebar {
 	background-color: #393a3d;
 	width: 200px;
+<<<<<<< HEAD
+	min-height: 100vh;
+}
+.main-wrapper {
+	/* background-color: yellow; */
+	/* width: 100%; */
+	width: calc(100% - 200px);
+}
+td {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+}
+table {
+	display: block;
+	overflow-x: auto;
+	white-space: nowrap;
+=======
 	min-height: 100vh; /* change it */
 	position: relative;
 }
 .main-wrapper {
 	/* background-color: yellow; */
 	width: calc(100% - 200px);
+>>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
 }
 
+/* test */
+/* th,
+td {
+	white-space: nowrap;
+} */
 /* side bar */
 /* ///////////////// */
 /* --sidebar header */
@@ -164,8 +188,6 @@ body {
 /* main content */
 /* //////////////// */
 .main-content {
-	/* width: 100%; */
-
 	background-color: #f4f5f7;
 	padding: 24px 24px 0 24px;
 }
