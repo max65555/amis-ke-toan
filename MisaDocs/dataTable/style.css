@@ -88,7 +88,7 @@
 	right: 0;
 	left: 0;
 	position: absolute;
-	bottom: calc(48px / -2);
+	bottom: calc(48px / -4);
 }
 .data-table__footer {
 	display: flex;
@@ -114,6 +114,7 @@
 .data-table__footer--prev-next {
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 }
 .data-table__footer-nav-icon {
 	width: 24px;
@@ -130,7 +131,7 @@
 }
 
 /* status   */
-.data-table__line:hover {
+.data-table__line:hover .data-table__data-line {
 	background-color: #f8f8f8;
 }
 .data-table__selected-row {
