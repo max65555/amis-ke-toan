@@ -16,7 +16,7 @@
     <div class="container">
         <!-- / -->
         <div class="sidebar">
-            <div class="header__left-side-menu-container">
+            <div id="menu-btn" class="header__left-side-menu-container">
                 <div class="header-left-side__menu-button">
                 </div>
             </div>
@@ -256,12 +256,10 @@
                                 <table class="data-table__wrapper">
 
 
-
                                     <tr class=" data-table__header-line">
                                         <th class="data-table__header data-table__header--checkbox "
-                                            style="background-color:#f5f5f5;">
-                                            <input type="checkbox" name="" id=""
-                                                class="data-table__header--input-checkbox">
+                                            style="background-color:#f5f5f5; z-index:10001">
+                                            <input type="checkbox" name="" id="data-table__all-check" class="">
                                         </th>
                                         <th class="data-table__header">
                                             <span class="data-table__header--text">
@@ -303,82 +301,23 @@
                                         <th class="data-table__header main-content__function_placeholder">
                                             Chi nhánh tài khoản ngân hàng
                                         </th>
-                                        <th class="data-table__header main-content__function">
+                                        <th class="data-table__header main-content__function"
+                                            style="display:table-cell">
                                             Chức năng
                                         </th>
                                     </tr>
                                     <!--  start items  -->
+
+
                                     <tr class="data-table__line">
                                         <td class="data-table__data-line data-table__header--checkbox">
-                                            <input type="checkbox" name="selected-line" id=""
+                                            <input type="checkbox" name="selected-line" id="data-table__all-check"
                                                 class="data-table__header--input-checkbox ">
                                         </td>
                                         <td class="data-table__data-line">
                                             <div class="data-table__header-with-pic">
                                                 <!-- <span class="data-table__header-pic">
-                                        </span> -->
-                                                <span class="data-table__header--text">
-                                                    000055
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Lê Khánh Toàn
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            12/10/2022
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            05200105
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Trưởng Phòng
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Vận hành tại hà nội
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Non natus soluta
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line main-content__function">
-                                            <div class="button button__link ">
-                                                <a href="" class="button__link--text data-table__button-edit">Sửa</a>
-                                                <div class="data-table__button-dropdown-edit">
-                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                    <div class="dropdown-list__list data-table__button-select-function"
-                                                        style="display:none">
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <<<<<<< HEAD </div>
-
-
+=======
                                         </td>
                                     </tr>
                                     <tr class="data-table__line">
@@ -389,219 +328,7 @@
                                         <td class="data-table__data-line">
                                             <div class="data-table__header-with-pic">
                                                 <!-- <span class="data-table__header-pic">
-                                        </span> -->
-                                                <span class="data-table__header--text">
-                                                    000055
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Lê Khánh Toàn
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            12/10/2022
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            05200105
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Trưởng Phòng
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Vận hành tại hà nội
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="button button__link ">
-                                                <a href="" class="button__link--text data-table__button-edit">Sửa</a>
-                                                <div class="data-table__button-dropdown-edit">
-                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                    <div class="dropdown-list__list data-table__button-select-function"
-                                                        style="display:none">
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </td>
-                                    </tr>
-                                    <tr class="data-table__line">
-                                        <td class="data-table__data-line data-table__header--checkbox">
-                                            <input type="checkbox" name="selected-line" id=""
-                                                class="data-table__header--input-checkbox ">
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__header-with-pic">
-                                                <!-- <span class="data-table__header-pic">
-                                        </span> -->
-                                                <span class="data-table__header--text">
-                                                    000055
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Lê Khánh Toàn
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            12/10/2022
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            05200105
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Trưởng Phòng
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Vận hành tại hà nội
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="button button__link ">
-                                                <a href="" class="button__link--text data-table__button-edit">Sửa</a>
-                                                <div class="data-table__button-dropdown-edit">
-                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                    <div class="dropdown-list__list data-table__button-select-function"
-                                                        style="display:none">
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </td>
-                                    </tr>
-                                    <tr class="data-table__line">
-                                        <td class="data-table__data-line data-table__header--checkbox">
-                                            <input type="checkbox" name="selected-line" id=""
-                                                class="data-table__header--input-checkbox ">
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__header-with-pic">
-                                                <!-- <span class="data-table__header-pic">
-                                        </span> -->
-                                                <span class="data-table__header--text">
-                                                    000055
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Lê Khánh Toàn
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            12/10/2022
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            05200105
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Trưởng Phòng
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Vận hành tại hà nội
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="button button__link ">
-                                                <a href="" class="button__link--text data-table__button-edit">Sửa</a>
-                                                <div class="data-table__button-dropdown-edit">
-                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                    <div class="dropdown-list__list data-table__button-select-function"
-                                                        style="display:none">
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </td>
-                                    </tr>
-                                    <tr class="data-table__line">
-                                        <td class="data-table__data-line data-table__header--checkbox">
-                                            <input type="checkbox" name="selected-line" id=""
-                                                class="data-table__header--input-checkbox ">
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__header-with-pic">
-                                                <!-- <span class="data-table__header-pic">
+>>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
                                                                         </span> -->
                                                 <span class="data-table__header--text">
                                                     000055
@@ -635,34 +362,553 @@
                                         <td class="data-table__data-line">
 
                                         </td>
-                                        <td class="data-table__data-line">
-                                            <div class="button button__link ">
-                                                <a href="" class="button__link--text data-table__button-edit">Sửa</a>
-                                                <div class="data-table__button-dropdown-edit">
-                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                    <div class="dropdown-list__list data-table__button-select-function"
-                                                        style="display:none">
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
-                                                        </div>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
 
+                                                        </div>
                                                     </div>
                                                 </div>
+
                                             </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id="data-table__all-check"
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+=======
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id=""
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+>>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
+                                                                        </span> -->
+                                                <span class="data-table__header--text">
+                                                    000055
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Lê Khánh Toàn
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            12/10/2022
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            05200105
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Trưởng Phòng
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Vận hành tại hà nội
+                                        </td>
+                                        <td class="data-table__data-line">
 
+                                        </td>
+                                        <td class="data-table__data-line">
 
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id="data-table__all-check"
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+=======
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id=""
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+>>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
+                                                                        </span> -->
+                                                <span class="data-table__header--text">
+                                                    000055
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Lê Khánh Toàn
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            12/10/2022
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            05200105
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Trưởng Phòng
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Vận hành tại hà nội
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id="data-table__all-check"
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+=======
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id=""
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+>>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
+                                                                        </span> -->
+                                                <span class="data-table__header--text">
+                                                    000055
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Lê Khánh Toàn
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            12/10/2022
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            05200105
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Trưởng Phòng
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Vận hành tại hà nội
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id="data-table__all-check"
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+=======
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id=""
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+>>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
+                                                                        </span> -->
+                                                <span class="data-table__header--text">
+                                                    000055
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Lê Khánh Toàn
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            12/10/2022
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            05200105
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Trưởng Phòng
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Vận hành tại hà nội
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id="data-table__all-check"
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+                                    =======
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="data-table__line">
+                                                                            <td class="data-table__data-line data-table__header--checkbox">
+                                                                                <input type="checkbox" name="selected-line" id=""
+                                                                                    class="data-table__header--input-checkbox ">
+                                                                            </td>
+                                                                            <td class="data-table__data-line">
+                                                                                <div class="data-table__header-with-pic">
+                                                                                    <!-- <span class="data-table__header-pic">
+                                    >>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
+                                                                                                            </span> -->
+                                                <span class="data-table__header--text">
+                                                    000055
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Lê Khánh Toàn
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            12/10/2022
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            05200105
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Trưởng Phòng
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Vận hành tại hà nội
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id="data-table__all-check"
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+=======
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id=""
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+>>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
+                                                                        </span> -->
+                                                <span class="data-table__header--text">
+                                                    000055
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Lê Khánh Toàn
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            12/10/2022
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            05200105
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Trưởng Phòng
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Vận hành tại hà nội
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr class="data-table__line">
@@ -718,34 +964,37 @@
                                         <td class="data-table__data-line">
 
                                         </td>
-                                        <td class="data-table__data-line main-content__function">
-                                            <div class="button button__link ">
-                                                <a href="" class="button__link--text data-table__button-edit">Sửa</a>
-                                                <div class="data-table__button-dropdown-edit">
-                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                    <div class="dropdown-list__list data-table__button-select-function"
-                                                        style="display:none">
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
-                                                        </div>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
 
+                                                        </div>
                                                     </div>
                                                 </div>
+
                                             </div>
-
-
                                         </td>
                                     </tr>
                                     <tr class="data-table__line">
@@ -756,6 +1005,362 @@
                                         <td class="data-table__data-line">
                                             <div class="data-table__header-with-pic">
                                                 <!-- <span class="data-table__header-pic">
+                                    =======
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="data-table__line">
+                                                                            <td class="data-table__data-line data-table__header--checkbox">
+                                                                                <input type="checkbox" name="selected-line" id=""
+                                                                                    class="data-table__header--input-checkbox ">
+                                                                            </td>
+                                                                            <td class="data-table__data-line">
+                                                                                <div class="data-table__header-with-pic">
+                                                                                    <!-- <span class="data-table__header-pic">
+                                    >>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
+                                                                                                            </span> -->
+                                                <span class="data-table__header--text">
+                                                    000055
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Lê Khánh Toàn
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            12/10/2022
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            05200105
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Trưởng Phòng
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Vận hành tại hà nội
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id=""
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+                                    =======
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="data-table__line">
+                                                                            <td class="data-table__data-line data-table__header--checkbox">
+                                                                                <input type="checkbox" name="selected-line" id=""
+                                                                                    class="data-table__header--input-checkbox ">
+                                                                            </td>
+                                                                            <td class="data-table__data-line">
+                                                                                <div class="data-table__header-with-pic">
+                                                                                    <!-- <span class="data-table__header-pic">
+                                    >>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
+                                                                                                            </span> -->
+                                                <span class="data-table__header--text">
+                                                    000055
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Lê Khánh Toàn
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            12/10/2022
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            05200105
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Trưởng Phòng
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Vận hành tại hà nội
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id=""
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+                                    =======
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="data-table__line">
+                                                                            <td class="data-table__data-line data-table__header--checkbox">
+                                                                                <input type="checkbox" name="selected-line" id=""
+                                                                                    class="data-table__header--input-checkbox ">
+                                                                            </td>
+                                                                            <td class="data-table__data-line">
+                                                                                <div class="data-table__header-with-pic">
+                                                                                    <!-- <span class="data-table__header-pic">
+                                    >>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
+                                                                                                            </span> -->
+                                                <span class="data-table__header--text">
+                                                    000055
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Lê Khánh Toàn
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            12/10/2022
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            05200105
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Trưởng Phòng
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Vận hành tại hà nội
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id=""
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+                                    =======
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="data-table__line">
+                                                                            <td class="data-table__data-line data-table__header--checkbox">
+                                                                                <input type="checkbox" name="selected-line" id=""
+                                                                                    class="data-table__header--input-checkbox ">
+                                                                            </td>
+                                                                            <td class="data-table__data-line">
+                                                                                <div class="data-table__header-with-pic">
+                                                                                    <!-- <span class="data-table__header-pic">
+                                    >>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
+                                                                                                            </span> -->
+                                                <span class="data-table__header--text">
+                                                    000055
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Lê Khánh Toàn
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            12/10/2022
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            05200105
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Trưởng Phòng
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            Vận hành tại hà nội
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line">
+
+                                        </td>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id=""
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+=======
+                                        </td>
+                                    </tr>
+                                    <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <input type="checkbox" name="selected-line" id=""
+                                                class="data-table__header--input-checkbox ">
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__header-with-pic">
+                                                <!-- <span class="data-table__header-pic">
+>>>>>>> 66aa08849ed24ee84898699c1be789a0546e7db2
                                                                         </span> -->
                                                 <span class="data-table__header--text">
                                                     000055
@@ -789,388 +1394,40 @@
                                         <td class="data-table__data-line">
 
                                         </td>
-                                        <td class="data-table__data-line main-content__function">
-                                            <div class="button button__link ">
-                                                <a href="" class="button__link--text data-table__button-edit">Sửa</a>
-                                                <div class="data-table__button-dropdown-edit">
-                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                    <div class="dropdown-list__list data-table__button-select-function"
-                                                        style="display:none">
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
-                                                        </div>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div>
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
 
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </td>
-                                    </tr>
-                                    <tr class="data-table__line">
-                                        <td class="data-table__data-line data-table__header--checkbox">
-                                            <input type="checkbox" name="selected-line" id=""
-                                                class="data-table__header--input-checkbox ">
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__header-with-pic">
-                                                <!-- <span class="data-table__header-pic">
-                                                                        </span> -->
-                                                <span class="data-table__header--text">
-                                                    000055
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Lê Khánh Toàn
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            12/10/2022
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            05200105
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Trưởng Phòng
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Vận hành tại hà nội
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line main-content__function">
-                                            <div class="button button__link ">
-                                                <a href="" class="button__link--text data-table__button-edit">Sửa</a>
-                                                <div class="data-table__button-dropdown-edit">
-                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                    <div class="dropdown-list__list data-table__button-select-function"
-                                                        style="display:none">
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </td>
-                                    </tr>
-                                    <tr class="data-table__line">
-                                        <td class="data-table__data-line data-table__header--checkbox">
-                                            <input type="checkbox" name="selected-line" id=""
-                                                class="data-table__header--input-checkbox ">
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__header-with-pic">
-                                                <!-- <span class="data-table__header-pic">
-                                                                        </span> -->
-                                                <span class="data-table__header--text">
-                                                    000055
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Lê Khánh Toàn
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            12/10/2022
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            05200105
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Trưởng Phòng
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Vận hành tại hà nội
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line main-content__function">
-                                            <div class="button button__link ">
-                                                <a href="" class="button__link--text data-table__button-edit">Sửa</a>
-                                                <div class="data-table__button-dropdown-edit">
-                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                    <div class="dropdown-list__list data-table__button-select-function"
-                                                        style="display:none">
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </td>
-                                    </tr>
-                                    <tr class="data-table__line">
-                                        <td class="data-table__data-line data-table__header--checkbox">
-                                            <input type="checkbox" name="selected-line" id=""
-                                                class="data-table__header--input-checkbox ">
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__header-with-pic">
-                                                <!-- <span class="data-table__header-pic">
-                                                                        </span> -->
-                                                <span class="data-table__header--text">
-                                                    000055
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Lê Khánh Toàn
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            12/10/2022
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            05200105
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Trưởng Phòng
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Vận hành tại hà nội
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line main-content__function">
-                                            <div class="button button__link ">
-                                                <a href="" class="button__link--text data-table__button-edit">Sửa</a>
-                                                <div class="data-table__button-dropdown-edit">
-                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                    <div class="dropdown-list__list data-table__button-select-function"
-                                                        style="display:none">
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </td>
-                                    </tr>
-                                    <tr class="data-table__line">
-                                        <td class="data-table__data-line data-table__header--checkbox">
-                                            <input type="checkbox" name="selected-line" id=""
-                                                class="data-table__header--input-checkbox ">
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__header-with-pic">
-                                                <!-- <span class="data-table__header-pic">
-                                                                        </span> -->
-                                                <span class="data-table__header--text">
-                                                    000055
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Lê Khánh Toàn
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            12/10/2022
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            05200105
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Trưởng Phòng
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Vận hành tại hà nội
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line main-content__function">
-                                            <div class="button button__link ">
-                                                <a href="" class="button__link--text data-table__button-edit">Sửa</a>
-                                                <div class="data-table__button-dropdown-edit">
-                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                    <div class="dropdown-list__list data-table__button-select-function"
-                                                        style="display:none">
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
-
-                                        </td>
-                                    </tr>
-                                    <tr class="data-table__line">
-                                        <td class="data-table__data-line data-table__header--checkbox">
-                                            <input type="checkbox" name="selected-line" id=""
-                                                class="data-table__header--input-checkbox ">
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__header-with-pic">
-                                                <!-- <span class="data-table__header-pic">
-                                                                        </span> -->
-                                                <span class="data-table__header--text">
-                                                    000055
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Lê Khánh Toàn
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            12/10/2022
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            05200105
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Trưởng Phòng
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            Vận hành tại hà nội
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line">
-
-                                        </td>
-                                        <td class="data-table__data-line main-content__function">
-                                            <div class="button button__link ">
-                                                <a href="" class="button__link--text data-table__button-edit">Sửa</a>
-                                                <div class="data-table__button-dropdown-edit">
-                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                    <div class="dropdown-list__list data-table__button-select-function"
-                                                        style="display:none">
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
                                             </div>
                                         </td>
                                     </tr>
+
 
                                     <!-- end items  -->
                                     <!-- data table's footer starts  -->
@@ -1202,12 +1459,14 @@
                                                         <span class="dropdown__input-text">
                                                             20 bản ghi trên 1 trang
                                                         </span>
-                                                        <div class="dropdown__input-icon">
+                                                        <div id="show-pages-btn" class="dropdown__input-icon">
 
                                                             <i class="icofont-rounded-down dropdown__i--icon"></i>
                                                         </div>
                                                     </div>
-                                                    <div class="dropdown-list__list" style="display:block">
+                                                    <div id="show-pages-list"
+                                                        class="dropdown-list__list show-pages-list"
+                                                        style="display:none;width:100%">
 
                                                         <div class="dropdown-list__list-item">
                                                             <span class="dropdown-list__list-item-text">
@@ -1298,13 +1557,13 @@
                                         </div>
                                         <div class="normal-text-field__input display_block">
                                             <input class="normal-text-field__input--text" type="text"
-                                                placeholder="mã nhân viên">
+                                                placeholder="mã nhân viên" required name="employeeID">
                                             </input>
                                             <div style="display:none" class="normal-text-field__icon--result">
                                                 <i class="icofont-check-circled normal-text-field__icon--icon"></i>
                                             </div>
                                         </div>
-                                        <span style="display:none" class="normal-text-field__respond--text">
+                                        <span style="visibility:hidden" class="normal-text-field__respond--text">
                                             tên trường không được để trống
                                         </span>
                                     </div>
@@ -1316,19 +1575,19 @@
                                         </div>
                                         <div class="normal-text-field__input display_block">
                                             <input class="normal-text-field__input--text" type="text"
-                                                placeholder="họ và tên">
+                                                placeholder="họ và tên" required>
                                             </input>
                                             <div style="display:none" class="normal-text-field__icon--result">
                                                 <i class="icofont-check-circled normal-text-field__icon--icon"></i>
                                             </div>
                                         </div>
-                                        <span style="display:none" class="normal-text-field__respond--text">
+                                        <span style="visibility:hidden" class="normal-text-field__respond--text">
                                             tên trường không được để trống
                                         </span>
                                     </div>
                                 </div>
                                 <div class="employee-addition__left-second">
-                                    <div class="dropdown-list" style="margin:12px">
+                                    <div class="dropdown-list" style="margin:12px;display:none">
                                         <span class="dropdown__label">
                                             Đơn vị <span style="color:red">*</span>
                                         </span>
@@ -1337,11 +1596,11 @@
                                                 đơn vị
                                             </span>
                                             <div class="dropdown__input-icon">
-                                                <i class="icofont-close-circled dropdown__i--close-icon"></i>
+
                                                 <i class="icofont-rounded-down dropdown__i--icon"></i>
                                             </div>
                                         </div>
-                                        <div class="dropdown__text--error" style="display:none">
+                                        <div class="dropdown__text--error">
                                             <span class="dropdown__span--error">
                                                 Error message
                                             </span>
@@ -1380,9 +1639,45 @@
 
                                         </div>
                                     </div>
+                                    <!-- start comboxboxlist -->
+                                    <div class="combo-box-list">
+                                        <span class="combo-box__label">
+                                            Đơn vị <span style="color:red">*</span>
+                                        </span>
+                                        <div class="dropwdown__input">
+                                            <input class="combo-box__input-text add-new__department--input"
+                                                placeholder="" type="text" required>
+                                            </input>
+                                            <div class="combo-box__input-icon add-new__department-combobox--icon">
+                                                <!-- <i class="icofont-close-circled combo-box__i--close-icon"></i> -->
+                                                <i class="icofont-rounded-down combo-box__i--icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="combo-box__text--error" style="visibility: hidden;">
+                                            <span class="combo-box__span--error">
+                                                Error message
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <div class="combo-box-list__list add-new__department-combo-box-list--list"
+                                                style="display:none">
+                                                <div class="combo-box-list--placeholder-item">
+                                                    <span class="combo-box-list--placeholder-text">
+                                                        - chọn giá trị -
+                                                    </span>
+                                                    <i class="icofont-check-alt combo-box-list--placeholder-icon"></i>
+                                                </div>
+                                                <div
+                                                    class="combo-box-list__list-item add-new__department-combo-box-item">
+                                                    <span class="combo-box-list__list-item-text">Đà Nắng</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end comboxboxlist -->
                                 </div>
                                 <div class="employee-addition__left-second">
-                                    <div class="textfield text-field__normal">
+                                    <div class="textfield text-field__normal" style="margin-top: 0px;">
                                         <div class="normal-text-field__label">
                                             <span class="normal-text-field__label--text">
                                                 Chức danh
@@ -1411,14 +1706,15 @@
                                                     Ngày sinh
                                                 </span>
                                             </div>
-                                            <div class="date-picker__button">
-
-                                                <span class="date-picker--date-format">
+                                            <div class="date-picker__button identity-issua__data-picker">
+                                                <span class="date-picker--date-format" style="display:none">
                                                     30/9/2022
                                                 </span>
-                                                <div class="date-picker__button-icon">
+                                                <div class="date-picker__button-icon" style="display:none">
                                                     <i class="icofont-ui-calendar date-picker__i--calender-icon"></i>
                                                 </div>
+                                                <input id="date-of-birth" type="date" name="" id=""
+                                                    class="identity-issue__data-picker">
                                             </div>
                                         </div>
                                         <div class="date-picker__top-part" style="display:none">
@@ -1585,20 +1881,23 @@
                                     <div class="addition__header--select-position margin_12">
                                         <div class="normal-text-field__label">
                                             <span class="normal-text-field__label--text">
-                                                Số CMND
+                                                Giới Tính
                                             </span>
                                         </div>
                                         <div class="employee-addition__right-first">
                                             <div class="selection-position">
-                                                <input type="radio" name="" id="" class=selection-position__check-box>
+                                                <input type="radio" name="gender" id=""
+                                                    class=selection-position__check-box value="0">
                                                 <span class="selection-position__text">Nam</span>
                                             </div>
                                             <div class="selection-position">
-                                                <input type="radio" name="" id="" class=selection-position__check-box>
+                                                <input type="radio" name="gender" id=""
+                                                    class=selection-position__check-box value="1">
                                                 <span class="selection-position__text">Nữ</span>
                                             </div>
                                             <div class="selection-position">
-                                                <input type="radio" name="" id="" class=selection-position__check-box>
+                                                <input type="radio" name="gender" id=""
+                                                    class=selection-position__check-box value="2">
                                                 <span class="selection-position__text">Khác</span>
                                             </div>
                                         </div>
@@ -1613,8 +1912,8 @@
                                             </span>
                                         </div>
                                         <div class="normal-text-field__input display_block">
-                                            <input class="normal-text-field__input--text" type="text"
-                                                placeholder="CMND">
+                                            <input class="normal-text-field__input--text employee-addition__identity-id"
+                                                type="text" placeholder="CMND">
                                             </input>
                                             <div style="display:none" class="normal-text-field__icon--result">
                                                 <i class="icofont-check-circled normal-text-field__icon--icon"></i>
@@ -1631,14 +1930,14 @@
                                                     Ngày cấp
                                                 </span>
                                             </div>
-                                            <div class="date-picker__button">
-
-                                                <span class="date-picker--date-format">
+                                            <div class="date-picker__button identity-issua__data-picker">
+                                                <span class="date-picker--date-format" style="display:none">
                                                     30/9/2022
                                                 </span>
-                                                <div class="date-picker__button-icon">
+                                                <div class="date-picker__button-icon" style="display:none">
                                                     <i class="icofont-ui-calendar date-picker__i--calender-icon"></i>
                                                 </div>
+                                                <input type="date" name="" id="" class="identity-issue__data-picker">
                                             </div>
                                         </div>
                                         <div class="date-picker__top-part" style="display:none">
@@ -1804,7 +2103,7 @@
                                     </div>
                                 </div>
                                 <div style="display:flex">
-                                    <div class="textfield text-field__normal pd-2">
+                                    <div class="textfield text-field__normal pd-2" style="    margin-top: 24px;">
                                         <div class="normal-text-field__label">
                                             <span class="normal-text-field__label--text">
                                                 nơi cấp
@@ -1908,6 +2207,68 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="employee-addition__bottom-contact">
+                                <div class="employee_addition-input-wrapper">
+                                    <div class="textfield text-field__normal pd-2">
+                                        <div class="normal-text-field__label">
+                                            <span class="normal-text-field__label--text">
+                                                Tải khoản ngân hàng
+                                            </span>
+                                        </div>
+                                        <div class="normal-text-field__input display_block">
+                                            <input class="normal-text-field__input--text" type="text"
+                                                placeholder="Tài khoản ngân hàng">
+                                            </input>
+                                            <div style="display:none" class="normal-text-field__icon--result">
+                                                <i class="icofont-check-circled normal-text-field__icon--icon"></i>
+                                            </div>
+                                        </div>
+                                        <span style="display:none" class="normal-text-field__respond--text">
+                                            tên trường không được để trống
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="employee_addition-input-wrapper">
+                                    <div class="textfield text-field__normal pd-2">
+                                        <div class="normal-text-field__label">
+                                            <span class="normal-text-field__label--text">
+                                                Tên ngân hàng
+                                            </span>
+                                        </div>
+                                        <div class="normal-text-field__input display_block">
+                                            <input class="normal-text-field__input--text" type="text"
+                                                placeholder="Tên ngân hàng">
+                                            </input>
+                                            <div style="display:none" class="normal-text-field__icon--result">
+                                                <i class="icofont-check-circled normal-text-field__icon--icon"></i>
+                                            </div>
+                                        </div>
+                                        <span style="display:none" class="normal-text-field__respond--text">
+                                            tên trường không được để trống
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="employee_addition-input-wrapper">
+                                    <div class="textfield text-field__normal pd-2">
+                                        <div class="normal-text-field__label">
+                                            <span class="normal-text-field__label--text">
+                                                Chi nhánh
+                                            </span>
+                                        </div>
+                                        <div class="normal-text-field__input display_block">
+                                            <input class="normal-text-field__input--text" type="text"
+                                                placeholder="Chi nhánh">
+                                            </input>
+                                            <div style="display:none" class="normal-text-field__icon--result">
+                                                <i class="icofont-check-circled normal-text-field__icon--icon"></i>
+                                            </div>
+                                        </div>
+                                        <span style="display: none;" class="normal-text-field__respond--text">
+                                            tên trường không được để trống
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- end information form -->
                         <div class="employee-addition__divide">
@@ -1922,7 +2283,7 @@
                                 <button class="button__semi btn">
                                     <span class="button__semi--text">Cất</span>
                                 </button>
-                                <button class="button__main btn">
+                                <button class="button__main btn" id="btnSaveEmployee">
                                     <span class="button__text">Cất và Thêm</span>
                                 </button>
                             </div>
@@ -2018,6 +2379,7 @@
 </body>
 <script src="js/jquery-3.6.1.min.js"></script>
 <script src="js/page/employee.js"></script>
+<script src="js/disableClick.js"></script>
 
 
 </html>

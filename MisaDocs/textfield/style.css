@@ -4,6 +4,8 @@
 }
 .text-field__normal {
 	width: 100%;
+	cursor: pointer;
+	margin-bottom: 0;
 }
 .normal-text-field__label {
 	/* width: 41px;
@@ -61,6 +63,7 @@
 	font-size: 12px;
 	font-weight: 400;
 	color: #e61d1d;
+	white-space: nowrap;
 }
 .normal-text-field__icon--result {
 	position: absolute;
@@ -94,11 +97,11 @@
 }
 /* status  */
 .text-field__normal:hover input.normal-text-field__input--text {
-	background-color: #f6f6f6;
+	/* background-color: #f6f6f6; */
 }
-.normal-text-field__input--text:focus {
+/* .normal-text-field__input--text:focus {
 	border-color: #50b83c;
-}
+} */
 .normal-text-field__respond {
 	height: 8px;
 	/* overflow: hidden; */
