@@ -318,6 +318,7 @@ function btnSaveEvent() {
 			let employee = {
 				EmployeeCode: employeeCode,
 				EmployeeName: employeeName,
+				departmentId: '142cb08f-7c31-21fa-8e90-67245e8b283e',
 				Gender: gender,
 				DateOfBirth: dateOfBirth,
 				IdentityNumber: identityID,
