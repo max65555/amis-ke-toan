@@ -36,6 +36,9 @@
 	background-color: white;
 }
 .data-table__header--checkbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: absolute;
 	padding: 12px;
 	border: unset;
