@@ -14,10 +14,14 @@
 }
 .data-table__header {
 	padding: 0 28px;
+	position: sticky;
+	z-index: 1000;
+	top: 0;
 	text-align: left;
 	/* border-bottom: 1px solid #e0e0e0; */
 	white-space: nowrap;
 	height: 48px;
+	background-color: #f5f5f5;
 }
 .data-table__header-line {
 	background-color: #f5f5f5;
@@ -36,10 +40,15 @@
 	background-color: white;
 }
 .data-table__header--checkbox {
+<<<<<<< HEAD
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: absolute;
+=======
+	position: sticky;
+	left: 0;
+>>>>>>> 1cc216d6ac3ca183a4c2826830ae476937d88d34
 	padding: 12px;
 	border: unset;
 	background-color: white;
@@ -48,7 +57,8 @@
 	box-sizing: border-box;
 	text-align: center;
 	border-right: 1px solid #e0e0e0;
-	/* border-bottom: 1px solid #e0e0e0; */
+	border-bottom: 1px solid #e0e0e0;
+	/* z-index: 10001; */
 }
 .data-table__header--input-checkbox {
 	width: 20px;
@@ -91,7 +101,7 @@
 	right: 0;
 	left: 0;
 	position: absolute;
-	bottom: calc(48px / -2);
+	bottom: calc(48px / -4);
 }
 .data-table__footer {
 	display: flex;
@@ -117,6 +127,7 @@
 .data-table__footer--prev-next {
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 }
 .data-table__footer-nav-icon {
 	width: 24px;
@@ -133,7 +144,7 @@
 }
 
 /* status   */
-.data-table__line:hover {
+.data-table__line:hover .data-table__data-line {
 	background-color: #f8f8f8;
 }
 .data-table__selected-row {
@@ -144,7 +155,7 @@
 	border-left: unset;
 }
 .data-table__header--checkbox + .data-table__header {
-	padding-left: 80px;
+	/* padding-left: 80px; */
 	border-left: unset;
 }
 .data-table__header + .main-content__function {
@@ -155,6 +166,6 @@
 	border-right: 1px solid #e0e0e0;
 }
 .main-content__function_placeholder {
-	padding-right: 148px;
-	border-right: unset;
+	/* padding-right: 25px; */
+	/* border-right: unset; */
 }
