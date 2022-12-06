@@ -30,6 +30,7 @@
 	box-sizing: border-box;
 }
 .data-table__data-line {
+	
 	text-align: left;
 	border-bottom: 1px solid #e0e0e0;
 	padding: 0 28px;
@@ -144,8 +145,8 @@
 	background-color: #f1ffef;
 }
 .data-table__header--checkbox + .data-table__data-line {
-	padding-left: 80px;
-	border-left: unset;
+	/* padding-left: 80px; */
+	/* border-left: unset; */
 }
 .data-table__header--checkbox + .data-table__header {
 	/* padding-left: 80px; */
