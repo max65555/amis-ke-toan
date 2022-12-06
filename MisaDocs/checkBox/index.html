@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="checkbox__container">
-            <form action="">
+            <form action="" style="display:none"=>
                 <label class="form-control">
                     <input type="checkbox" name="checkbox" />
                     Checkbox
@@ -33,9 +33,18 @@
                     Checkbox Disabled - checked
                 </label>
             </form>
-
+            <div class="checkbox__container">
+                <input id="test1" type="checkbox" class="checkbox__input-checkbox">
+                <label for="test1" class="checkbox__label">
+                </label>
+            </div>
         </div>
     </div>
 </body>
+<script>
+    document.getElementById("test1").addEventListener("click", function () {
+        console.log(document.getElementById("test1").checked);
+    })
+</script>
 
 </html>
