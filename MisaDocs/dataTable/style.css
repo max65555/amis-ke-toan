@@ -13,7 +13,7 @@
 	/* position: relative; */
 }
 .data-table__header {
-	padding: 0 28px;
+	/* padding: 0 28px; */
 	position: sticky;
 	z-index: 1000;
 	top: 0;
@@ -31,27 +31,47 @@
 }
 .data-table__data-line {
 	
-	text-align: left;
-	border-bottom: 1px solid #e0e0e0;
-	padding: 0 28px;
-	width: 67px;
-	white-space: nowrap;
-	height: 48px;
-	/* box-sizing: border-box; */
+text-align: left;
+	
+/* border-bottom: 1px solid #e0e0e0; */
+	
+/* padding: 0 28px; */
+	
+/* width: 67px; */
+	
+white-space: nowrap;
+	
+height: 48px;
+	
+/* box-sizing: border-box; */
+	
+background-color: white;
+}
+.data-table__data-item{
+	border: 1px solid #e0e0e0;
+	border-top:unset ;
+	border-left: unset;
+	width:100%;
+	height: 100%;
+	padding:0 28px;
 	background-color: white;
+	box-sizing: border-box;
+	display:flex;
+	align-items: center;
 }
 .data-table__header--checkbox {
 	position: sticky;
 	left: 0;
-	padding: 12px;
+	top: 0;
+	/* padding: 12px; */
 	border: unset;
 	background-color: white;
 	/* height: 48px; */
 	width: 48px;
 	box-sizing: border-box;
 	text-align: center;
-	border-right: 1px solid #e0e0e0;
-	border-bottom: 1px solid #e0e0e0;
+	/* border-right: 1px solid #e0e0e0; */
+	/* border-bottom: 1px solid #e0e0e0; */
 	/* z-index: 10001; */
 }
 .data-table__header--input-checkbox {
@@ -61,7 +81,7 @@
 .data-table__header-with-icon {
 	/* display: flex;
 	align-items: center;
-	height: 100%; */
+data-table__data-item	height: 100%; */
 	display: flex;
 	align-items: center;
 }
@@ -144,22 +164,4 @@
 .data-table__selected-row {
 	background-color: #f1ffef;
 }
-.data-table__header--checkbox + .data-table__data-line {
-	/* padding-left: 80px; */
-	/* border-left: unset; */
-}
-.data-table__header--checkbox + .data-table__header {
-	/* padding-left: 80px; */
-	border-left: unset;
-}
-.data-table__header + .main-content__function {
-	height: 48px;
-	display: flex;
-	align-items: center;
-	background-color: #f5f5f5;
-	border-right: 1px solid #e0e0e0;
-}
-.main-content__function_placeholder {
-	/* padding-right: 25px; */
-	/* border-right: unset; */
-}
+

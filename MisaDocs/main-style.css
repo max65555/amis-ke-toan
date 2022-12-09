@@ -38,7 +38,7 @@ td {
 	word-wrap: break-word;
 }
 table {
-	display: block;
+	/* display: block; */
 	/* overflow-x: auto; */
 	white-space: nowrap;
 }
@@ -247,15 +247,46 @@ td {
 }
 td,
 th {
-	border-right: solid 1px #e0e0e0;
-	border-left: solid 1px #e0e0e0;
+	/* border-right: solid 1px #e0e0e0; */
+	/* border-left: solid 1px #e0e0e0; */
+	/* box-sizing: border-box; */
 }
 .main-content__function {
 	position: sticky;
-	right: 0;
+	right: 0px;
 	display: flex;
 	/* right: 0; */
 	/* display: table-cell; */
+}
+
+.data-table__header--checkbox + .data-table__header {
+	/* padding-left: 80px; */
+	border-left: unset;
+}
+.data-table__header + .main-content__function {
+	display: table-cell;
+}
+.main-content__function > .data-table__data-item{
+	/* border-bottom: unset;
+	background-color: #f5f5f5;
+	*/
+	border-left:1px solid #e0e0e0; 
+}
+.data-table__header > .data-table__data-item{
+	/* padding:0; */
+	width:100%;
+	border-bottom:unset ;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.main-content__function_placeholder {
+	/* padding-right: 25px; */
+	/* border-right: unset; */
+}
+.main-content__function_placeholder > .data-table__data-item{
+	border-right:unset;
 }
 .table__function-reload {
 	display: flex;
