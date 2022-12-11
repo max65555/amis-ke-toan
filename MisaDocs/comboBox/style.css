@@ -1,132 +1,133 @@
 .combo-box-list {
-	position: relative;
-	/* background-color: red; */
-	flex: 1;
-	/* margin-top: 7px; */
-	margin-right: 12px;
-	margin-left: 12px;
+  position: relative;
+  /* background-color: red; */
+  flex: 1;
+  /* margin-top: 7px; */
+  margin-right: 12px;
+  margin-left: 12px;
+  padding-top: 14px;
 }
 .combo-box__label {
-	display: block;
-	font-size: 14px;
-	font-weight: 500;
-	text-align: left;
-	color: #1f1f1f;
-	margin-bottom: 8px;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  color: #1f1f1f;
+  margin-bottom: 8px;
 }
 .dropwdown__input {
-	width: 200px;
-	height: 36px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color: #ffffff;
-	border-radius: 3px;
-	box-sizing: border;
-	border: 1px solid #50b83c;
-	z-index: 1;
-	box-sizing: border-box;
+  width: 200px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-sizing: border;
+  border: 1px solid #50b83c;
+  z-index: 1;
+  box-sizing: border-box;
 }
 .combo-box__input-text {
-	white-space: nowrap;
-	overflow: hidden;
-	/* max-width: 140px; */
-	font-size: 14px;
-	padding: 0px 12px;
-	font-weight: 400;
-	color: black;
-	text-align: left;
-	border: unset;
-	outline: unset;
-	/* background-color: red; */
-	flex: 1;
-	width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  /* max-width: 140px; */
+  font-size: 14px;
+  padding: 0px 12px;
+  font-weight: 400;
+  color: black;
+  text-align: left;
+  border: unset;
+  outline: unset;
+  /* background-color: red; */
+  flex: 1;
+  width: 100%;
 }
 .combo-box__input-icon {
-	display: flex;
-	align-items: center;
-	height: 100%;
-	/* padding: 0px 12px; */
-	/* background-color: cyan; */
-	border-left: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  /* padding: 0px 12px; */
+  /* background-color: cyan; */
+  border-left: 1px solid #e0e0e0;
 }
 .combo-box__i--close-icon {
-	width: 16px;
-	height: 16px;
-	font-size: 16px;
-	color: gray;
-	margin-left: 8px;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  color: gray;
+  margin-left: 8px;
 }
 .combo-box__i--icon {
-	display: block;
-	width: 16px;
-	height: 16px;
-	font-size: 16px;
-	height: 100%;
-	padding: 0px 12px;
-	line-height: 2.2;
-	width: 100%;
+  display: block;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  height: 100%;
+  padding: 0px 12px;
+  line-height: 2.2;
+  width: 100%;
 }
 .combo-box__text--error {
-	margin-top: 8px;
+  margin-top: 8px;
 }
 .combo-box__span--error {
-	font-size: 12px;
-	text-align: left;
-	color: #e61d1d;
-	font-weight: 400;
+  font-size: 12px;
+  text-align: left;
+  color: #e61d1d;
+  font-weight: 400;
 }
 /* combo-box-list the List */
 .combo-box-list__list {
-	overflow-y: overlay;
-	overflow-x: hidden;
-	white-space: nowrap;
-	position: absolute;
-	top: 36;
-	width: 100%;
-	background-color: white;
-	max-height: 308px;
-	border-radius: 4px;
-	box-shadow: 0px 4px 16px #171b2a3d;
-	z-index: 0;
-	padding-bottom: 8px;
-	z-index: 1;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 36;
+  width: 100%;
+  background-color: white;
+  max-height: 308px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 16px #171b2a3d;
+  z-index: 0;
+  padding-bottom: 8px;
+  z-index: 1;
 }
 .combo-box-list--placeholder-item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 8px;
-	padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  padding-bottom: 0;
 }
 .combo-box-list--placeholder-text {
-	font-size: 14px;
-	font-weight: 400;
-	text-align: left;
-	color: #50b83c;
-	margin-left: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  color: #50b83c;
+  margin-left: 8px;
 }
 .combo-box-list--placeholder-icon {
-	width: 24px;
-	height: 24px;
-	font-size: 24px;
-	color: #50b83c;
-	margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  color: #50b83c;
+  margin-right: 8px;
 }
 .combo-box-list__list-item {
-	height: 36px;
-	display: flex;
-	align-items: center;
-	margin: 0 8px;
-	border-radius: 4px;
-	padding-left: 8px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+  border-radius: 4px;
+  padding-left: 8px;
 }
 .combo-box-list__list-item:hover {
-	background-color: #50b83c1a;
+  background-color: #50b83c1a;
 }
 .combo-box-list__list-item-text {
-	font-size: 14px;
-	text-align: left;
-	color: #1f1f1f;
-	font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+  color: #1f1f1f;
+  font-weight: 400;
 }
