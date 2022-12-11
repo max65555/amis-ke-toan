@@ -87,7 +87,7 @@ function ShowAndHideSideBar() {
 			$('#menu-btn').addClass('menu-btn--scale-down');
 			$('.main-wrapper').css('width', 'calc(100% - 56px)');
 			console.log('hide ');
-		} else if (sidebar.width() == 56) {
+		} else if (sidebar.width() <= 56) {
 			// show sidebar
 			sidebar.css('width', '200px');
 			$('.sidebar__header').css('visibility', 'visible');
