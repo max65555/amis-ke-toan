@@ -86,12 +86,18 @@ td {
   padding-top: 24px;
   /* overflow-y: auto; */
 }
-.sidebar__menu--item {
+.sidebar__menu--item { 
   height: 42px;
   display: flex;
   align-items: center;
   padding: 0 14px;
   cursor: pointer;
+}
+.sidebar__menu-item-selected{
+  box-sizing: border-box;
+  padding-left:calc(14px - 6px) !important;
+  border-left:6px solid #2ca01c;
+
 }
 .sidebar__item--icon {
   width: 24px;

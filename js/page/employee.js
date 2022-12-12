@@ -12,8 +12,10 @@ $(document).ready(function () {
   DropdownShowAndHideFunctionalBar()
   allCheckBoxEventExecute()
   ComboBoxExecution()
+  sidebarSelectedMenuItem();
   ErrorMessageByFillingNothing()
   btnSaveEvent()
+
   // ValidateDate();
   // hideExtraBlockWhileClickedOutSideHub();
 })
@@ -241,6 +243,19 @@ function ComboBoxExecution() {
   })
 }
 /**
+ * definite what sidebar-menu-item is being selected by border-left color
+ * Author : toanlk (29/10/2022)
+ */
+function sidebarSelectedMenuItem() {
+  let sidebarMenuItem = $(".sidebar__menu--item");
+  sidebarMenuItem.click(function () {
+    sidebarMenuItem.each(function (i, obj) {
+      $(obj).removeClass("sidebar__menu-item-selected");
+    });
+    $(this).addClass("sidebar__menu-item-selected");
+  })
+}
+/** 
  * show and hide error message when there is nothing what user have inserted
  * Author: toanlk (29/10/2022)
  */
