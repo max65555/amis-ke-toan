@@ -97,7 +97,9 @@ td {
   box-sizing: border-box;
   padding-left:calc(14px - 6px) !important;
   border-left:6px solid #2ca01c;
-
+}
+.sidebar__menu-item-selected .sidebar__item--label-text{
+	font-weight: 600;
 }
 .sidebar__item--icon {
   width: 24px;
@@ -108,6 +110,7 @@ td {
 .sidebar__item--label {
 }
 .sidebar__item--label-text {
+	user-select: none;
   color: white;
 }
 .sidebar__menu--item:hover {
@@ -271,17 +274,18 @@ th {
 }
 .main-content__function {
   position: sticky;
-  right: 0px;
+  right: -1px;
   display: flex;
   /* right: 0; */
   /* display: table-cell; */
 }
 
 .data-table__header--checkbox + .data-table__header {
-  /* padding-left: 80px; */
   border-left: unset;
 }
-
+.data-table__header--checkbox .data-table__data-item{
+	padding: 0 16px;	
+} 
 .data-table__header + .main-content__function {
   display: table-cell;
 }
@@ -495,7 +499,7 @@ th {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 12px;
 }
 .employee-addition__footer--left {
   padding-left: 12px;
