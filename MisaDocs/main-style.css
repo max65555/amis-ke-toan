@@ -275,7 +275,7 @@ th {
 }
 .main-content__function {
   position: sticky;
-  right: -1px;
+  right: 0;
   display: flex;
   /* right: 0; */
   /* display: table-cell; */

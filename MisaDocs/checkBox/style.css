@@ -45,10 +45,10 @@
 	display: inline-block;
 }
 .checkbox__input-anim--checked{
-	animation: checkbox-checked 1s forwards;
+	animation: checkbox-checked .4s forwards;
 }
 .checkbox__input-anim--unchecked{
-	animation: checkbox-unchecked 1s forwards;
+	animation: checkbox-unchecked .4s forwards;
 	
 }
 @keyframes checkbox-checked {
