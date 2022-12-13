@@ -15,7 +15,7 @@ $(document).ready(function () {
   sidebarSelectedMenuItem();
   ErrorMessageByFillingNothing()
   btnSaveEvent()
-
+  checkboxClickAnimation();
   // ValidateDate();
   // hideExtraBlockWhileClickedOutSideHub();
 })
@@ -255,6 +255,33 @@ function sidebarSelectedMenuItem() {
     $(this).addClass("sidebar__menu-item-selected");
   })
 }
+/**
+ * rotate checkbox every time user changes checkbox value 
+ * Author: toanlk (13/12/2022)
+ */
+function checkboxClickAnimation() {
+  let checkboxInput = $(".checkbox__input-checkbox");  
+  checkboxInput.change(function () {
+    if (this.checked) {
+      console.log("test1");
+      $(".checkbox__container").removeClass("checkbox__input-anim--unchecked");
+      $(".checkbox__container").addClass("checkbox__input-anim--checked");
+    }
+    else {
+      console.log("test2");
+      $(".checkbox__container").removeClass("checkbox__input-anim--checked");
+      $(".checkbox__container").addClass("checkbox__input-anim--unchecked");
+    }
+  })
+}
+
+
+
+
+
+
+
+
 /** 
  * show and hide error message when there is nothing what user have inserted
  * Author: toanlk (29/10/2022)
