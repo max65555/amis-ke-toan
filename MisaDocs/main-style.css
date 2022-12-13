@@ -25,6 +25,8 @@ body {
   width: 200px;
   /* min-height: 100vh; */
   height: 100vh;
+  /* max-height: 100vh; */
+  /* overflow: auto; */
   position: relative;
   /* overflow-y: auto;
 	overflow-x:hidden; */
@@ -84,7 +86,17 @@ td {
 /* --sidebar menu */
 .sidebar__menu {
   padding-top: 24px;
-  /* overflow-y: auto; */
+  overflow-y: auto;
+  /* overflow-x: auto; */
+  height: calc(100vh - 80px);
+}
+.sidebar__menu-list{
+  
+/* min-height: 100vh; */
+  
+/* height: 100%; */
+  
+/* overflow-y: auto; */
 }
 .sidebar__menu--item { 
   height: 42px;
