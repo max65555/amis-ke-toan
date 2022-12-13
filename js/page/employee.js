@@ -15,7 +15,7 @@ $(document).ready(function () {
   sidebarSelectedMenuItem();
   ErrorMessageByFillingNothing()
   btnSaveEvent()
-
+  checkboxClickAnimation();
   // ValidateDate();
   // hideExtraBlockWhileClickedOutSideHub();
 })
@@ -206,6 +206,9 @@ function allCheckBoxEventExecute() {
     } else {
       allCheckBox.each(function (i, obj) {
         $(obj).prop('checked', false)
+          // console.log(obj);
+          // $(obj).parent().removeClass("checkbox__input-anim--checked");
+          // $(obj).parent().addClass("checkbox__input-anim--unchecked");    
       })
     }
   })
@@ -255,6 +258,47 @@ function sidebarSelectedMenuItem() {
     $(this).addClass("sidebar__menu-item-selected");
   })
 }
+/**
+ * rotate checkbox every time user changes checkbox value 
+ * Author: toanlk (13/12/2022)
+ */
+function checkboxClickAnimation() {
+  let checkboxInput = $(".checkbox__input-checkbox");  
+  checkboxInput.change(function () {
+    if (this.checked) {
+      if (this.id == "data-table__all-check") {
+        $(".checkbox__input-checkbox").each(function (i,obj) {
+          $(obj).parent().removeClass("checkbox__input-anim--unchecked");
+          $(obj).parent().addClass("checkbox__input-anim--checked");
+        })
+      } else {
+        $(this).parent().removeClass("checkbox__input-anim--unchecked");
+        $(this).parent().addClass("checkbox__input-anim--checked");
+      }
+    }
+    else {
+      if (this.id == "data-table__all-check") {
+        $(".checkbox__input-checkbox").each(function (i,obj) {
+          $(obj).parent().removeClass("checkbox__input-anim--checked");
+          $(obj).parent().addClass("checkbox__input-anim--unchecked");
+        })
+      }
+      else {
+        $(this).parent().removeClass("checkbox__input-anim--checked");
+        $(this).parent().addClass("checkbox__input-anim--unchecked");
+        
+      }
+    }
+  })
+}
+
+
+
+
+
+
+
+
 /** 
  * show and hide error message when there is nothing what user have inserted
  * Author: toanlk (29/10/2022)
@@ -267,7 +311,6 @@ function ErrorMessageByFillingNothing(element) {
   $(element).focusout(function () {
     $(this).css('border', '1px solid #e0e0e0')
     if ($(this).val() == '') {
-      console.log('is empty')
       $(this).css('border', '1px solid red')
       $(this)
         .parent()
@@ -279,21 +322,17 @@ function ErrorMessageByFillingNothing(element) {
         .parent()
         .siblings('.normal-text-field__respond--text')
         .css('visibility', 'hidden')
-      console.log('is  not empty')
       $(this).css('border', '1px solid #50b83c')
     }
   })
   $(element).change(function () {
-    console.log('changing')
     if ($(this).val() == '') {
-      console.log('is empty')
       $(this).css('border', '1px solid red')
       $(this)
         .parent()
         .siblings('.normal-text-field__respond--text')
         .css('visibility', 'visible')
     } else {
-      console.log('is  not empty')
       $(this).css('border', '1px solid #50b83c')
     }
   })
@@ -322,7 +361,6 @@ function ValidateEmployeeData() {
 function btnSaveEvent() {
   $('#btnSaveEmployee').click(function () {
     // let isValidate = ValidateEmployeeData();
-    console.log('go to button')
     let isValidate = ValidateEmployeeData()
     if (isValidate) {
       // thu thap du lieu
@@ -353,7 +391,6 @@ function btnSaveEvent() {
         DateOfBirth: dateOfBirth,
         IdentityNumber: identityID,
       }
-      console.log(employee)
       //API to save an employee
       // $.ajax({
       // 	type: 'POST',
@@ -378,14 +415,11 @@ function btnSaveEvent() {
           return res.json()
         })
         .then((data) => {
-          // console.log(res);
           alert(data.data.EmployeeCode[0])
         })
         .catch((res) => {
-          console.log(res)
         })
     } else {
-      console.log('false')
     }
   })
 }

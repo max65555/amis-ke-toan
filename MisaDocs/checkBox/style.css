@@ -1,9 +1,8 @@
 @import url(../../css/component/variable.css);
-.container {
-	padding: 120px;
-}
+
 .checkbox__container{
-	width:auto;
+	width:20px;
+	height:20px;
 	position:relative;
 }
 
@@ -15,26 +14,57 @@
 .checkbox__label{
 	
 }
+/* white box */
 .checkbox__label::before{
-	position:absolute;
-	
+	/* position:absolute; */
 	content:" ";
 	display:inline-block;
-	width:20px;
-	height:20px;
+	width:18px;
+	height:18px;
 	border: 1px solid #767676;
 	border-radius:4px;
-	user-select: none;	
+	user-select: none;
+	background-color: white;
 }
+/* green tick */
 .checkbox__label::after{
 	/* display:none; */
 	width:20px;
 	height:20px;
 	position:absolute;
 	content:" ";
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	display: none;
-	background:url(../../assets/images/Sprites.64af8f61.svg) no-repeat -1221px -358px;
+	background:url(../../assets/images/Sprites.64af8f61.svg) no-repeat -1222px -358px;
+	transform: rotate(-90deg);
 }
 .checkbox__input-checkbox:checked + .checkbox__label::after{
 	display: inline-block;
+}
+.checkbox__input-anim--checked{
+	animation: checkbox-checked .4s forwards;
+}
+.checkbox__input-anim--unchecked{
+	animation: checkbox-unchecked .4s forwards;
+	
+}
+@keyframes checkbox-checked {
+  0%{
+		transform: rotate(0deg);		
+	}
+	100%{
+
+		transform: rotate(90deg);		
+	}
+}
+@keyframes checkbox-unchecked {
+  0%{
+		transform: rotate(0deg);		
+	}
+	100%{
+		transform: rotate(-90deg);		
+	}
 }
