@@ -10,13 +10,16 @@ $(document).ready(function () {
   ShowAndHideSideBar()
   DropDownShowAndHideHub()
   DropdownShowAndHideFunctionalBar()
-  allCheckBoxEventExecute()
-  ComboBoxExecution()
+  // allCheckBoxEventExecute()
+  // ComboBoxExecution()
   sidebarSelectedMenuItem();
-  ErrorMessageByFillingNothing()
-  btnSaveEvent()
+  ErrorMessageByFillingNothing( $('.normal-text-field__input--text[required]'))
   renderEmployeeData();
-  checkboxClickAnimation();
+  ButtonClosePopUp($(".button__closePopup"), $(".popup-response-overlay"))
+  loadDepartment();
+  $('.add-new__department--input').attr("departmentId", "test2");
+  console.log($('.add-new__department--input').attr("departmentId"));
+  // checkboxClickAnimation();
   // ValidateDate();
   // hideExtraBlockWhileClickedOutSideHub();
 })
@@ -40,6 +43,7 @@ function CloseFormAddNewEmployee() {
  */
 function OpenFormAddNewEmployee() {
   try {
+    $("#btnSaveEmployee").attr("onclick", "btnSaveEvent()");
     var usernameError = $('#btnTurnOnAddNewEmployeeForm')
     var popUpAddNewEmployee = $('#popupAddNewEmployee')
     usernameError.on('click', function () {
@@ -158,7 +162,7 @@ function DropdownShowAndHideFunctionalBar() {
         .parent()
         .parent()
         .css('z-index', '1000')
-      console.log(blockShowAndHide.parent().parent().parent().parent())
+      // console.log(blockShowAndHide.parent().parent().parent().parent())
     } else {
       $('.data-table__data-line').each(function (i, obj) {
         $(obj).css('z-index', '999')
@@ -241,9 +245,11 @@ function ComboBoxExecution() {
     $(this).parent().css('border', '1px solid #e0e0e0')
   })
   $('.add-new__department-combo-box-item').click(function () {
+    // console.log($(this));
     blockShowAndHide.css('display', 'none')
-    console.log($('.add-new__department-combobox--icon'))
     $('.add-new__department--input').val($(this).find('>:first-child').text())
+    $('.add-new__department--input').attr("departmentId", $(this).find('>:first-child').attr("departmentId"));
+    $(".combo-box__text--error").css("visibility", 'hidden');
   })
 }
 /**
@@ -264,10 +270,8 @@ function sidebarSelectedMenuItem() {
  * Author: toanlk (13/12/2022)
  */
 function checkboxClickAnimation() {
+  
   let checkboxInput = $(".checkbox__input-checkbox");  
-  checkboxInput.click(function () {
-    console.log("tes");
-  });
   checkboxInput.change(function () {
     if (this.checked) {
       if (this.id == "data-table__all-check") {
@@ -296,50 +300,47 @@ function checkboxClickAnimation() {
   })
 }
 
-
-
-
-
-
-
-
 /** 
  * show and hide error message when there is nothing what user have inserted
  * Author: toanlk (29/10/2022)
  */
 function ErrorMessageByFillingNothing(element) {
-  element = $('.normal-text-field__input--text[required]')
-  $(element).focus(function () {
-    $(this).css('border', '1px solid #50b83c')
-  })
+  // $(element).focus(function () {
+  //   $(this).css('border', '1px solid #50b83c')
+  // })
   $(element).focusout(function () {
     $(this).css('border', '1px solid #e0e0e0')
     if ($(this).val() == '') {
-      $(this).css('border', '1px solid red')
-      $(this)
-        .parent()
-        .siblings('.normal-text-field__respond--text')
-        .css('visibility', 'visible')
-      // isValidate = true;
+     ErrorMessageByPressSaveButton($(this),true)
     } else {
-      $(this)
-        .parent()
-        .siblings('.normal-text-field__respond--text')
-        .css('visibility', 'hidden')
-      $(this).css('border', '1px solid #50b83c')
+     ErrorMessageByPressSaveButton($(this),false)
+      
     }
   })
   $(element).change(function () {
     if ($(this).val() == '') {
-      $(this).css('border', '1px solid red')
-      $(this)
-        .parent()
-        .siblings('.normal-text-field__respond--text')
-        .css('visibility', 'visible')
+      ErrorMessageByPressSaveButton($(this),false);
     } else {
       $(this).css('border', '1px solid #50b83c')
     }
   })
+ 
+}
+function ErrorMessageByPressSaveButton(inputTag,isValidate) {
+  if (isValidate) {
+    inputTag.css('border', '1px solid red')
+    inputTag
+    .parent()
+    .siblings('.normal-text-field__respond--text')
+    .css('visibility', 'visible')
+  }
+  else {
+    inputTag
+        .parent()
+        .siblings('.normal-text-field__respond--text')
+        .css('visibility', 'hidden')
+      inputTag.css('border', '1px solid #50b83c')
+  }
 }
 /**
  * validate data fields
@@ -349,99 +350,128 @@ function ValidateEmployeeData() {
   let isValidate = true
   $('.normal-text-field__input--text[required]').each(function (i, obj) {
     if ($(obj).val() == '') {
+      ErrorMessageByPressSaveButton($(obj),true);
       isValidate = false
     }
   })
   if ($('.add-new__department--input').val() == '') {
+    console.log("test1");
+    // ErrorMessageByPressSaveButton($(this),true);
+    $(".combo-box__text--error").css("visibility","visible");
     isValidate = false
   }
   return isValidate
 }
+
+/**
+ * load department from api
+ * Author: toanlk (29/10/2022)
+ */
+async function loadDepartment() {
+  try {  
+    let url= "https://amis.manhnv.net/api/v1/Departments";
+    let response = await getAllAPIData(url);
+    let html = "";
+    response.forEach(function (departmentItem) {
+      let htmlSegment = `
+        <div
+          class="combo-box-list__list-item add-new__department-combo-box-item">
+          <span class="combo-box-list__list-item-text" departmentId="${departmentItem.DepartmentId}">${departmentItem.DepartmentName}</span>
+        </div>
+      `
+      html += htmlSegment;
+    })
+    $(".combo-box-list__list")[0].innerHTML += html;
+  }
+  catch (e) {
+    console.log(e);
+  }
+
+  ComboBoxExecution();
+
+}
+
 /**
  * save a instance of employee into database using api
  * Author: toanlk (29/10/2022)
  * //BUG
  */
 function btnSaveEvent() {
-  $('#btnSaveEmployee').click(function () {
-    // let isValidate = ValidateEmployeeData();
-    let isValidate = ValidateEmployeeData()
-    if (isValidate) {
-      // thu thap du lieu
-      let employeeCode = $(
-        $('.normal-text-field__input--text[required]')[0]
-      ).val()
-      let employeeName = $(
-        $('.normal-text-field__input--text[required]')[1]
-      ).val()
-      let department = $('.add-new__department--input').val()
-      let dateOfBirth = $('#date-of-birth').val()
-      let gender
-      if ($('.selection-position__check-box[name="gender"]')[0].checked) {
-        gender = 0
-      }
-      if ($('.selection-position__check-box[name="gender"]')[1].checked) {
-        gender = 1
-      }
-      if ($('.selection-position__check-box[name="gender"]')[2].checked) {
-        gender = 2
-      }
-      let identityID = $('.employee-addition__identity-id').val()
-      let employee = {
-        EmployeeCode: employeeCode,
-        EmployeeName: employeeName,
-        departmentId: '142cb08f-7c31-21fa-8e90-67245e8b283e',
-        Gender: gender,
-        DateOfBirth: dateOfBirth,
-        IdentityNumber: identityID,
-      }
-      //API to save an employee
-      // $.ajax({
-      // 	type: 'POST',
-      // 	url: 'https://amis.manhnv.net/api/v1/employees',
-      // 	data: JSON.stringify(employee),
-      // 	dataType: 'json',
-      // 	contentType: 'application/json',
-      // 	success: function (response) {
-      // 		console.log(response);
-      // 	},
-      // });
-      var statusCode = null
-      fetch('https://amis.manhnv.net/api/v1/employees', {
-        method: 'POST',
-        body: JSON.stringify(employee),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
+  try{
+    // $('#btnSaveEmployee').click(function () {
+      // let isValidate = ValidateEmployeeData();
+      let isValidate = ValidateEmployeeData();
+      if (isValidate) {
+        // thu thap du lieu
+        let employeeCode = $(
+          $('.normal-text-field__input--text[required]')[0]
+          ).val()
+          let employeeName = $(
+            $('.normal-text-field__input--text[required]')[1]
+            ).val()
+        let department = $('.add-new__department--input').attr("departmentId");
+            let dateOfBirth = $('#date-of-birth').val()
+            let gender
+            if ($('.selection-position__check-box[name="gender"]')[0].checked) {
+              gender = 0
+            }
+            if ($('.selection-position__check-box[name="gender"]')[1].checked) {
+          gender = 1
+        }
+        if ($('.selection-position__check-box[name="gender"]')[2].checked) {
+          gender = 2
+        }
+        let identityID = $('.employee-addition__identity-id').val()
+        let employee = {
+          EmployeeCode: employeeCode,
+          EmployeeName: employeeName,
+          DepartmentId: department,
+          Gender: gender,
+          DateOfBirth: dateOfBirth,
+          IdentityNumber: identityID,
+        }
+        var statusCode = null
+        fetch('https://amis.manhnv.net/api/v1/employees', {
+          method: 'POST',
+          body: JSON.stringify(employee),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
         .then((res) => {
           var statusCode = res.status
           return res.json()
         })
         .then((data) => {
-          alert(data.data.EmployeeCode[0])
+          ErrorResponse(data);
         })
-        .catch((res) => {
+        .catch((err) => {
+          console.log(err);
         })
-    } else {
-    }
-  })
+      }
+      else {
+        
+      }
+    // })
+  }
+  catch(e){
+    console.log(e)
+  }
 }
 /**
  * save a instance of employee into database using api
  * Author: toanlk (11/12/2022)
  */
-async function fetchAllEmployeeData() {
-    let url = 'https://amis.manhnv.net/api/v1/Employees';
+async function getAllAPIData(url) {
     try {
         let res = await fetch(url);
         return await res.json();
     } catch (error) {
         console.log(error);
-  }
+    }
 }
 async function renderEmployeeData() {
-    let employees = await fetchAllEmployeeData();
+    let employees = await getAllAPIData('https://amis.manhnv.net/api/v1/Employees');
     let employeeHTMLItem = '';
     employees.forEach(employee => {
         let htmlSegment = ` <tr class="data-table__line">
@@ -460,7 +490,7 @@ async function renderEmployeeData() {
 
                                                 <div class="data-table__header-with-pic">
                                                     <span class="data-table__header--text">
-                                                        ${employee.employeeCode}
+                                                        ${employee.EmployeeCode}
                                                     </span>
                                                 </div>
                                             </div>
@@ -520,7 +550,7 @@ async function renderEmployeeData() {
                                         <td class="data-table__data-line main-content__function ">
                                             <div class="data-table__data-item" style="border-left:1px solid #e0e0e0">
                                                 <div class="button button__link ">
-                                                    <a href=""
+                                                    <a onClick="updateEmployeeButton('${employee.EmployeeId}')"
                                                         class="button__link--text data-table__button-edit">Sửa</a>
                                                     <div class="data-table__button-dropdown-edit"
                                                         id="functional__dropdown-btn">
@@ -553,5 +583,51 @@ async function renderEmployeeData() {
     });
     let container = document.querySelector('.data-table__wrapper');
     container.innerHTML += employeeHTMLItem;
+    //fucntion will run after async fetch data finished
+    checkboxClickAnimation();
+    allCheckBoxEventExecute();
+      DropdownShowAndHideFunctionalBar()
+}
+/**
+ * Error handler while data is not valid to post to API by using error popup; 
+ * Author: toanlk (15/12/2022)
+ */
+function ErrorResponse(res) {
+  console.log(res);
+  if (res != 1) {
+    $(".popup-response-overlay").removeClass("display_none");
+    $(".popup-response__main-text")[0].innerHTML = res.devMsg;
+    $(".popup-response__main-icon-background").addClass("popup-response--error");
+  }
+  else {
+    $(".popup-response-overlay").removeClass("display_none");
+    $(".popup-response__main-text")[0].innerHTML = "thêm mới thành công";
+    $(".popup-response__main-icon-background").addClass("popup-response--success");
+  }
+}
+/**
+ * 
+ * Close a pop up by pressing button
+ * Author: toanlk (15/12/2022)
+ * @param {Button user's going to press} button 
+ * @param {popup user's going to close} popUp 
+ */
+function ButtonClosePopUp(button,popUp) {
+  button.click(function () {
+    popUp.addClass("display_none");
+  });
+
 }
 
+function updateEmployeeButton(employeeId) { 
+  $('#popupAddNewEmployee').removeClass("display_none");
+  $("#btnSaveEmployee").attr("onclick", "updateEmployeeSend()");
+  console.log(employeeId);
+}
+/**
+ * send update api to update a employee
+ * Author: toanlk (15/12/2022)
+ */
+function updateEmployeeSend() {
+  //update an employee
+}

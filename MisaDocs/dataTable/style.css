@@ -15,7 +15,7 @@
 .data-table__header {
   /* padding: 0 28px; */
   position: sticky;
-  z-index: 1000;
+  /* z-index: 1000; */
   top: 0;
   text-align: left;
   /* border-bottom: 1px solid #e0e0e0; */

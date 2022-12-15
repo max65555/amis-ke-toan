@@ -556,12 +556,17 @@ th {
 .popup-response__main-icon-background {
   width: 48px;
   height: 48px;
-  background: url(../assets/images/Sprites.64af8f61.svg) no-repeat -24px -961px;
+ 
 }
 .popup-response__main-icon-warning-background {
   width: 48px;
   height: 48px;
   background: url(../assets/images/Sprites.64af8f61.svg) no-repeat -592px -462px;
+}
+.popup-response__main-icon-background.popup-response--error{
+   background: url(../assets/images/Sprites.64af8f61.svg) no-repeat -24px -961px;
+}.popup-response__main-icon-background.popup-response--success{
+   background: url(../assets/images/Sprites.64af8f61.svg) no-repeat -990px -462px;
 }
 .popup-response__main-icon-question-background {
   width: 48px;
