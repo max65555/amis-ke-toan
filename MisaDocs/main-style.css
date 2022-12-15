@@ -270,7 +270,7 @@ td {
   min-width: calc(100vh - 300px);
   overflow-x: auto;
   border: 1px solid #e0e0e0;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .main-content__data-table--fixed-column {
   position: relative;

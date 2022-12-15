@@ -15,6 +15,7 @@ $(document).ready(function () {
   sidebarSelectedMenuItem();
   ErrorMessageByFillingNothing()
   btnSaveEvent()
+  renderEmployeeData();
   checkboxClickAnimation();
   // ValidateDate();
   // hideExtraBlockWhileClickedOutSideHub();
@@ -264,6 +265,9 @@ function sidebarSelectedMenuItem() {
  */
 function checkboxClickAnimation() {
   let checkboxInput = $(".checkbox__input-checkbox");  
+  checkboxInput.click(function () {
+    console.log("tes");
+  });
   checkboxInput.change(function () {
     if (this.checked) {
       if (this.id == "data-table__all-check") {
@@ -427,4 +431,127 @@ function btnSaveEvent() {
  * save a instance of employee into database using api
  * Author: toanlk (11/12/2022)
  */
-function loadEmployeeData() {}
+async function fetchAllEmployeeData() {
+    let url = 'https://amis.manhnv.net/api/v1/Employees';
+    try {
+        let res = await fetch(url);
+        return await res.json();
+    } catch (error) {
+        console.log(error);
+  }
+}
+async function renderEmployeeData() {
+    let employees = await fetchAllEmployeeData();
+    let employeeHTMLItem = '';
+    employees.forEach(employee => {
+        let htmlSegment = ` <tr class="data-table__line">
+                                        <td class="data-table__data-line data-table__header--checkbox">
+                                            <div class="data-table__data-item">
+                                                <div class="checkbox__container">
+                                                    <input id="${employee.EmployeeId}" type="checkbox"
+                                                        class="checkbox__input-checkbox data-table__header--input-checkbox">
+                                                    <label for="${employee.EmployeeId}" class="checkbox__label">
+                                                    </label>
+                                                </div>
+                                            </div>      
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__data-item">
+
+                                                <div class="data-table__header-with-pic">
+                                                    <span class="data-table__header--text">
+                                                        ${employee.employeeCode}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__data-item">
+                                                ${employee.EmployeeName}
+                                            </div>
+
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__data-item">
+                                              ${employee.gender}
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__data-item">
+                                              ${employee.DateOfBirth}
+                                            </div>
+
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__data-item">
+                                                ${employee.IdentityNumber}
+
+                                            </div>
+
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__data-item">
+                                                  ${employee.PositionName}
+                                            </div>
+
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__data-item">
+                                                ${employee.DepartmentName}
+                                            </div>
+
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__data-item">
+                                            ${employee.BankAccountNumber}
+                                            </div>
+
+                                        </td>
+                                        <td class="data-table__data-line">
+                                            <div class="data-table__data-item">
+                                            ${employee.BankName}
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line main-content__function_placeholder">
+                                            <div class="data-table__data-item">
+                                              ${employee.BankBranchName}
+                                            </div>
+                                        </td>
+                                        <td class="data-table__data-line main-content__function ">
+                                            <div class="data-table__data-item" style="border-left:1px solid #e0e0e0">
+                                                <div class="button button__link ">
+                                                    <a href=""
+                                                        class="button__link--text data-table__button-edit">Sửa</a>
+                                                    <div class="data-table__button-dropdown-edit"
+                                                        id="functional__dropdown-btn">
+                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                        <div style="display:none"
+                                                            class="dropdown-list__list data-table__button-select-function">
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Nhân Bản
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Xóa
+                                                                </span>
+                                                            </div>
+                                                            <div class="dropdown-list__list-item">
+                                                                <span class="dropdown-list__list-item-text">
+                                                                    Ngừng sử dụng
+                                                                </span>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>`;
+        employeeHTMLItem += htmlSegment;
+    });
+    let container = document.querySelector('.data-table__wrapper');
+    container.innerHTML += employeeHTMLItem;
+}
+
