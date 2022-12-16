@@ -272,6 +272,9 @@ td {
   border: 1px solid #e0e0e0;
   overflow-y: auto;
 }
+.z-index-10000{
+  z-index: 10000;
+}
 .main-content__data-table--fixed-column {
   position: relative;
 }
@@ -620,4 +623,10 @@ th {
 }
 .show-pages-list {
   bottom: calc(100% + 1px);
+}
+
+.data-table__header--text{
+  padding: 4px 8px;
+  color:transparent;
+  background-color: #F8F8F8;
 }

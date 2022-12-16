@@ -18,11 +18,17 @@ $(document).ready(function () {
   ButtonClosePopUp($(".button__closePopup"), $(".popup-response-overlay"))
   loadDepartment();
   $('.add-new__department--input').attr("departmentId", "test2");
-  console.log($('.add-new__department--input').attr("departmentId"));
   // checkboxClickAnimation();
   // ValidateDate();
   // hideExtraBlockWhileClickedOutSideHub();
+  Nhap();
 })
+//TODO: Delete It
+function Nhap() {
+  $(".bank-branch__data-input").change(function () {
+    console.log($(".bank-branch__data-input").val());
+  });
+}
 /**
  * close employee addition form by clicking close button
  * Author: ToanLK (18/10/2022)
@@ -394,9 +400,11 @@ async function loadDepartment() {
 /**
  * save a instance of employee into database using api
  * Author: toanlk (29/10/2022)
+ * @param {is this function going to update an employee instead of save} isUpdate
  * //BUG
  */
-function btnSaveEvent() {
+
+function btnSaveEvent(isUpdate) {
   try{
     // $('#btnSaveEmployee').click(function () {
       // let isValidate = ValidateEmployeeData();
@@ -422,6 +430,16 @@ function btnSaveEvent() {
           gender = 2
         }
         let identityID = $('.employee-addition__identity-id').val()
+        let address = $(".add-new__employee--address").val();
+        let identityDate = $(".data-picker__identityDate").val();
+        let identityPlace = $(".data-picker__identityPlace").val();
+        let telephoneNumber = $(".telephone-number__data-input").val();
+        let landline =  $(".landline__data-input").val();
+        let email =  $(".email__data-input").val();
+        let bankAccount =  $(".bank-account__data-input").val();
+        let bankName =  $(".bank-name__data-input").val();
+        let bankBranch =  $(".bank-branch__data-input").val();
+        
         let employee = {
           EmployeeCode: employeeCode,
           EmployeeName: employeeName,
@@ -429,9 +447,21 @@ function btnSaveEvent() {
           Gender: gender,
           DateOfBirth: dateOfBirth,
           IdentityNumber: identityID,
+          identityDate: identityDate,
+          identityPlace: identityPlace,
+          address: address,
+          telephoneNumber: telephoneNumber,
+          phoneNumber: landline,
+          email: email,
+          bankAccountNumber: bankAccount, 
+          bankName: bankName,
+          bankBranchName:bankBranch
         }
         var statusCode = null
-        fetch('https://amis.manhnv.net/api/v1/employees', {
+        //TODO: update an employee
+        //update an employee
+        url = 'https://amis.manhnv.net/api/v1/employees';
+        fetch(url, {
           method: 'POST',
           body: JSON.stringify(employee),
           headers: {
@@ -450,7 +480,7 @@ function btnSaveEvent() {
         })
       }
       else {
-        
+
       }
     // })
   }
@@ -489,7 +519,7 @@ async function renderEmployeeData() {
                                             <div class="data-table__data-item">
 
                                                 <div class="data-table__header-with-pic">
-                                                    <span class="data-table__header--text">
+                                                    <span class="">
                                                         ${employee.EmployeeCode}
                                                     </span>
                                                 </div>
@@ -581,12 +611,12 @@ async function renderEmployeeData() {
                                     </tr>`;
         employeeHTMLItem += htmlSegment;
     });
-    let container = document.querySelector('.data-table__wrapper');
-    container.innerHTML += employeeHTMLItem;
+    let container = document.querySelector('.data-table__item-container');
+    container.innerHTML = employeeHTMLItem;
     //fucntion will run after async fetch data finished
     checkboxClickAnimation();
     allCheckBoxEventExecute();
-      DropdownShowAndHideFunctionalBar()
+    DropdownShowAndHideFunctionalBar()
 }
 /**
  * Error handler while data is not valid to post to API by using error popup; 
