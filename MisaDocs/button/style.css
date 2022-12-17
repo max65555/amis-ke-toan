@@ -11,8 +11,10 @@
 	margin: 0;
 	position: relative;
 }
-.btn:hover {
+.button__main:hover {
 	cursor: pointer;
+	background-color: #5dc748;
+
 }
 
 /* main button  */
@@ -165,7 +167,4 @@
 .button--disable {
 	opacity: 56%;
 }
-.btn:hover {
-	background-color: #5dc748;
-	color: red;
-}
+

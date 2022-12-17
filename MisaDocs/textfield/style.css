@@ -114,3 +114,10 @@
 .text-being-required {
 	color: red;
 }
+
+.text-field--disable{
+	background-color:#EBEBEB ;
+	border-color: #E0E0E0;
+	color:#666666;
+
+}

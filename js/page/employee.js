@@ -21,14 +21,10 @@ $(document).ready(function () {
   // checkboxClickAnimation();
   // ValidateDate();
   // hideExtraBlockWhileClickedOutSideHub();
-  Nhap();
+  disableToolBar(true);
+  ClosePopupByDoubleClick($(".close-popup-employee-btn"), $("#popupAddNewEmployee"));
 })
-//TODO: Delete It
-function Nhap() {
-  $(".bank-branch__data-input").change(function () {
-    console.log($(".bank-branch__data-input").val());
-  });
-}
+
 /**
  * close employee addition form by clicking close button
  * Author: ToanLK (18/10/2022)
@@ -180,8 +176,8 @@ function DropdownShowAndHideFunctionalBar() {
 /**
  * hide drop down part while click outside the active area of dropDownList
  * Author: ToanLK (25/10/2022)
- * @param {the button that click to hide and show} trigger
- * @param {dropdownlist suppose to be hide and show}}dropdownlist
+ * @param {button } button that click to hide and show
+ * @param {dropdownlist}dropdownlist suppose to be hide and show
  */
 function HideExtraBlockWhileClickOutSide(trigger, dropdownlist) {
   $(document).on('click', function (event) {
@@ -400,7 +396,7 @@ async function loadDepartment() {
 /**
  * save a instance of employee into database using api
  * Author: toanlk (29/10/2022)
- * @param {is this function going to update an employee instead of save} isUpdate
+ * @param {isUpdate} isUpdate is this function going to update an employee instead of save
  * //BUG
  */
 
@@ -501,122 +497,123 @@ async function getAllAPIData(url) {
     }
 }
 async function renderEmployeeData() {
-    let employees = await getAllAPIData('https://amis.manhnv.net/api/v1/Employees');
-    let employeeHTMLItem = '';
-    employees.forEach(employee => {
-        let htmlSegment = ` <tr class="data-table__line">
-                                        <td class="data-table__data-line data-table__header--checkbox">
-                                            <div class="data-table__data-item">
-                                                <div class="checkbox__container">
-                                                    <input id="${employee.EmployeeId}" type="checkbox"
-                                                        class="checkbox__input-checkbox data-table__header--input-checkbox">
-                                                    <label for="${employee.EmployeeId}" class="checkbox__label">
-                                                    </label>
-                                                </div>
-                                            </div>      
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__data-item">
+  let employees = await getAllAPIData('https://amis.manhnv.net/api/v1/Employees');
+  let employeeHTMLItem = '';
+  employees.forEach(employee => {
+    let htmlSegment = ` <tr class="data-table__line">
+                                    <td class="data-table__data-line data-table__header--checkbox">
+                                        <div class="data-table__data-item">
+                                            <div class="checkbox__container">
+                                                <input id="${employee.EmployeeId}" type="checkbox"
+                                                    class="checkbox__input-checkbox data-table__header--input-checkbox">
+                                                <label for="${employee.EmployeeId}" class="checkbox__label">
+                                                </label>
+                                            </div>
+                                        </div>      
+                                    </td>
+                                    <td class="data-table__data-line">
+                                        <div class="data-table__data-item">
 
-                                                <div class="data-table__header-with-pic">
-                                                    <span class="">
-                                                        ${employee.EmployeeCode}
-                                                    </span>
-                                                </div>
+                                            <div class="data-table__header-with-pic">
+                                                <span class="">
+                                                    ${employee.EmployeeCode}
+                                                </span>
                                             </div>
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__data-item">
-                                                ${employee.EmployeeName}
-                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="data-table__data-line">
+                                        <div class="data-table__data-item">
+                                            ${employee.EmployeeName}
+                                        </div>
 
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__data-item">
-                                              ${employee.gender}
-                                            </div>
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__data-item">
-                                              ${employee.DateOfBirth}
-                                            </div>
+                                    </td>
+                                    <td class="data-table__data-line">
+                                        <div class="data-table__data-item">
+                                          ${employee.gender}
+                                        </div>
+                                    </td>
+                                    <td class="data-table__data-line">
+                                        <div class="data-table__data-item">
+                                          ${employee.DateOfBirth}
+                                        </div>
 
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__data-item">
-                                                ${employee.IdentityNumber}
+                                    </td>
+                                    <td class="data-table__data-line">
+                                        <div class="data-table__data-item">
+                                            ${employee.IdentityNumber}
 
-                                            </div>
+                                        </div>
 
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__data-item">
-                                                  ${employee.PositionName}
-                                            </div>
+                                    </td>
+                                    <td class="data-table__data-line">
+                                        <div class="data-table__data-item">
+                                              ${employee.PositionName}
+                                        </div>
 
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__data-item">
-                                                ${employee.DepartmentName}
-                                            </div>
+                                    </td>
+                                    <td class="data-table__data-line">
+                                        <div class="data-table__data-item">
+                                            ${employee.DepartmentName}
+                                        </div>
 
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__data-item">
-                                            ${employee.BankAccountNumber}
-                                            </div>
+                                    </td>
+                                    <td class="data-table__data-line">
+                                        <div class="data-table__data-item">
+                                        ${employee.BankAccountNumber}
+                                        </div>
 
-                                        </td>
-                                        <td class="data-table__data-line">
-                                            <div class="data-table__data-item">
-                                            ${employee.BankName}
-                                            </div>
-                                        </td>
-                                        <td class="data-table__data-line main-content__function_placeholder">
-                                            <div class="data-table__data-item">
-                                              ${employee.BankBranchName}
-                                            </div>
-                                        </td>
-                                        <td class="data-table__data-line main-content__function ">
-                                            <div class="data-table__data-item" style="border-left:1px solid #e0e0e0">
-                                                <div class="button button__link ">
-                                                    <a onClick="updateEmployeeButton('${employee.EmployeeId}')"
-                                                        class="button__link--text data-table__button-edit">Sửa</a>
-                                                    <div class="data-table__button-dropdown-edit"
-                                                        id="functional__dropdown-btn">
-                                                        <i class="icofont-rounded-down dropdown__i--icon"></i>
-                                                        <div style="display:none"
-                                                            class="dropdown-list__list data-table__button-select-function">
-                                                            <div class="dropdown-list__list-item">
-                                                                <span class="dropdown-list__list-item-text">
-                                                                    Nhân Bản
-                                                                </span>
-                                                            </div>
-                                                            <div class="dropdown-list__list-item">
-                                                                <span class="dropdown-list__list-item-text">
-                                                                    Xóa
-                                                                </span>
-                                                            </div>
-                                                            <div class="dropdown-list__list-item">
-                                                                <span class="dropdown-list__list-item-text">
-                                                                    Ngừng sử dụng
-                                                                </span>
-                                                            </div>
-
+                                    </td>
+                                    <td class="data-table__data-line">
+                                        <div class="data-table__data-item">
+                                        ${employee.BankName}
+                                        </div>
+                                    </td>
+                                    <td class="data-table__data-line main-content__function_placeholder">
+                                        <div class="data-table__data-item">
+                                          ${employee.BankBranchName}
+                                        </div>
+                                    </td>
+                                    <td class="data-table__data-line main-content__function ">
+                                        <div class="data-table__data-item" style="border-left:1px solid #e0e0e0">
+                                            <div class="button button__link ">
+                                                <a onClick="updateEmployeeButton('${employee.EmployeeId}')"
+                                                    class="button__link--text data-table__button-edit">Sửa</a>
+                                                <div class="data-table__button-dropdown-edit"
+                                                    id="functional__dropdown-btn">
+                                                    <i class="icofont-rounded-down dropdown__i--icon"></i>
+                                                    <div style="display:none"
+                                                        class="dropdown-list__list data-table__button-select-function">
+                                                        <div class="dropdown-list__list-item">
+                                                            <span class="dropdown-list__list-item-text">
+                                                                Nhân Bản
+                                                            </span>
                                                         </div>
+                                                        <div class="dropdown-list__list-item">
+                                                            <span class="dropdown-list__list-item-text">
+                                                                Xóa
+                                                            </span>
+                                                        </div>
+                                                        <div class="dropdown-list__list-item">
+                                                            <span class="dropdown-list__list-item-text">
+                                                                Ngừng sử dụng
+                                                            </span>
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
-                                        </td>
-                                    </tr>`;
-        employeeHTMLItem += htmlSegment;
-    });
-    let container = document.querySelector('.data-table__item-container');
-    container.innerHTML = employeeHTMLItem;
-    //fucntion will run after async fetch data finished
-    checkboxClickAnimation();
-    allCheckBoxEventExecute();
-    DropdownShowAndHideFunctionalBar()
+                                        </div>
+                                    </td>
+                                </tr>`;
+    employeeHTMLItem += htmlSegment;
+  });
+  let container = document.querySelector('.data-table__item-container');
+  container.innerHTML = employeeHTMLItem;
+  //fucntion will run after async fetch data finished
+  checkboxClickAnimation();
+  allCheckBoxEventExecute();
+  DropdownShowAndHideFunctionalBar();
+  disableToolBar(employees.length == 0);
 }
 /**
  * Error handler while data is not valid to post to API by using error popup; 
@@ -639,8 +636,8 @@ function ErrorResponse(res) {
  * 
  * Close a pop up by pressing button
  * Author: toanlk (15/12/2022)
- * @param {Button user's going to press} button 
- * @param {popup user's going to close} popUp 
+ * @param {Button} button user going to close
+ * @param {popup } popUp user going to close
  */
 function ButtonClosePopUp(button,popUp) {
   button.click(function () {
@@ -660,4 +657,32 @@ function updateEmployeeButton(employeeId) {
  */
 function updateEmployeeSend() {
   //update an employee
+}
+
+/**
+ * disable Toolbar while there is no instance of employee in the data table
+ * Author: toanlk(17/12/2022)
+ * @param {isDisable} isDisable is toolbar disable or not
+ */
+function disableToolBar(isDisable) {
+  if (isDisable) {
+    $(".table-function-reload--icon").addClass("button--disable");
+    $(".searching-text-field").addClass("text-field--disable");
+  }
+  else {
+    $(".table-function-reload--icon").removeClass("button--disable");
+    $(".searching-text-field").removeClass("text-field--disable");  
+  }
+}
+/**
+ * double Click to close a pop up
+ * Author: toanlk (17/12/2022)
+ * @param {button} button is going to be press
+ * @param {popUp} popUp is going to be press
+ */
+function ClosePopupByDoubleClick(button, popUp) {
+  button.dblclick(function () {
+    popUp.addClass("display_none");
+  })
+
 }
