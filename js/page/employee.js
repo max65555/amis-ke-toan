@@ -23,8 +23,11 @@ $(document).ready(function () {
   // hideExtraBlockWhileClickedOutSideHub();
   disableToolBar(true);
   ClosePopupByDoubleClick($(".close-popup-employee-btn"), $("#popupAddNewEmployee"));
+  showUpToolTip(".sidebar__menu--item",".sidebar__item-tool-tip");
+  showUpToolTip(".text-field__cmnd",".sidebar__item-tool-tip")
+  
 })
-
+var isMinimizeSidebar = false;
 /**
  * close employee addition form by clicking close button
  * Author: ToanLK (18/10/2022)
@@ -100,17 +103,17 @@ function ShowAndHideSideBar() {
       $('#menu-btn').css('left', '0')
       $('#menu-btn').addClass('menu-btn--scale-down')
       $('.main-wrapper').css('width', 'calc(100% - 56px)')
-      console.log('hide ')
+      isMinimizeSidebar = true;
     } else if (sidebar.width() <= 56) {
       // show sidebar
       sidebar.css('width', '200px')
       $('.sidebar__header').css('visibility', 'visible')
       $('.sidebar__item--label').css('display', 'inline')
-
       $('#menu-btn').css('left', '')
       $('#menu-btn').removeClass('menu-btn--scale-down')
       $('.main-wrapper').css('width', 'calc(100% - 200px)')
-      console.log('show ')
+      isMinimizeSidebar = false;
+      hideAllSidebarToolTip();
     }
   })
 }
@@ -522,7 +525,7 @@ async function renderEmployeeData() {
                                         </div>
                                     </td>
                                     <td class="data-table__data-line">
-                                        <div class="data-table__data-item">
+                                        <div class="data-table__data-item" style="justify-content:left">
                                             ${employee.EmployeeName}
                                         </div>
 
@@ -533,13 +536,13 @@ async function renderEmployeeData() {
                                         </div>
                                     </td>
                                     <td class="data-table__data-line">
-                                        <div class="data-table__data-item">
+                                        <div class="data-table__data-item" style="justify-content:center">
                                           ${employee.DateOfBirth}
                                         </div>
 
                                     </td>
                                     <td class="data-table__data-line">
-                                        <div class="data-table__data-item">
+                                        <div class="data-table__data-item" style="justify-content:right">
                                             ${employee.IdentityNumber}
 
                                         </div>
@@ -558,7 +561,7 @@ async function renderEmployeeData() {
 
                                     </td>
                                     <td class="data-table__data-line">
-                                        <div class="data-table__data-item">
+                                        <div class="data-table__data-item" style="justify-content:right">
                                         ${employee.BankAccountNumber}
                                         </div>
 
@@ -686,3 +689,25 @@ function ClosePopupByDoubleClick(button, popUp) {
   })
 
 }
+/**
+ * hovering sidebar appears tooltips  
+ * Author: toanlk (17/12/2022)
+ * @param {hoverInObject} string of jquery selection object that user is going to hover in
+ * @param {tooltip} string of jquery selection object should be show up 
+ */
+function showUpToolTip(hoverInObject, tooltip) {
+  $(hoverInObject).hover(function () {
+    console.log("show tool tip");
+    $(this).find(tooltip).removeClass("display_none");
+  }, function () {
+    $(this).find(tooltip).addClass("display_none");
+    
+  });
+}
+
+function hideAllSidebarToolTip() {
+  $(".sidebar__item-tool-tip").forEach(function () {
+    $(this).addClass("display_none");
+  });
+}
+

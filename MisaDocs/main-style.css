@@ -7,6 +7,7 @@
 @import url(./popup/style.css);
 @import url(./textfield/style.css);
 @import url(./checkBox/style.css);
+@import url(../css/component/variable.css);
 
 /* layout */
 /* //////////////////////////// */
@@ -87,9 +88,9 @@ td {
 /* --sidebar menu */
 .sidebar__menu {
   padding-top: 24px;
-  overflow-y: auto;
-  /* overflow-x: auto; */
+  overflow-y: visible;
   height: calc(100vh - 80px);
+  overflow-x: visible;
 }
 .sidebar__menu-list{
   
@@ -105,6 +106,7 @@ td {
   align-items: center;
   padding: 0 14px;
   cursor: pointer;
+  position: relative;
 }
 .sidebar__menu-item-selected{
   box-sizing: border-box;
@@ -114,6 +116,7 @@ td {
 .sidebar__menu-item-selected .sidebar__item--label-text{
 	font-weight: 600;
 }
+
 .sidebar__item--icon {
   width: 24px;
   height: 24px;
@@ -126,6 +129,36 @@ td {
 	user-select: none;
   color: white;
 }
+.sidebar__item-tool-tip{
+  position: absolute;
+  left: calc(100% + 8px) ;
+  /* width:94px; */
+  padding:0 12px;
+  height: 40px;
+  background-color:var(--sidebar-color) ;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom:0;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  opacity: 94%;
+  color:#FFFFFF;
+  text-align: center;
+  z-index: 10001;
+}
+.sidebar__item-tool-tip::before{
+  content: ""; 
+  background-color:var(--sidebar-color);
+  width:7px;
+  height:7px;
+  right:calc(100% - 3.5px);
+  transform: rotate(45deg);
+  position: absolute;
+}
+
 .sidebar__menu--item:hover {
   background-color: #58595d;
 }
@@ -629,4 +662,5 @@ th {
   padding: 4px 8px;
   color:transparent;
   background-color: #F8F8F8;
+  /* justify-content: left; */
 }
