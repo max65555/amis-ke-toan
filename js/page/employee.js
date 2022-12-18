@@ -50,6 +50,8 @@ function OpenFormAddNewEmployee() {
   try {
     $("#btnSaveEmployee").attr("onclick", "btnSaveEvent()");
     var usernameError = $('#btnTurnOnAddNewEmployeeForm')
+  $(".addition__header--title")[0].innerHTML = "Thông tin nhân viên";
+
     var popUpAddNewEmployee = $('#popupAddNewEmployee')
     usernameError.on('click', function () {
       popUpAddNewEmployee.removeClass('display_none')
@@ -403,7 +405,7 @@ async function loadDepartment() {
  * //BUG
  */
 
-function btnSaveEvent(isUpdate) {
+function btnSaveEvent(isUpdate,employeeId) {
   try{
     // $('#btnSaveEmployee').click(function () {
       // let isValidate = ValidateEmployeeData();
@@ -458,25 +460,46 @@ function btnSaveEvent(isUpdate) {
         }
         var statusCode = null
         //TODO: update an employee
-        //update an employee
-        url = 'https://amis.manhnv.net/api/v1/employees';
-        fetch(url, {
-          method: 'POST',
-          body: JSON.stringify(employee),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        })
-        .then((res) => {
-          var statusCode = res.status
-          return res.json()
-        })
-        .then((data) => {
-          ErrorResponse(data);
-        })
-        .catch((err) => {
-          console.log(err);
-        })
+        if(!isUpdate){
+          url = 'https://amis.manhnv.net/api/v1/employees';
+          fetch(url, {
+            method: 'POST',
+            body: JSON.stringify(employee),
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+          .then((res) => {
+            var statusCode = res.status
+            return res.json()
+          })
+          .then((data) => {
+            ErrorResponse(data,"Thêm mới thành công");
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+        }
+        else{
+          url = 'https://amis.manhnv.net/api/v1/employees/' + employeeId;
+          fetch(url, {
+            method: 'PUT',
+            body: JSON.stringify(employee),
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+          .then((res) => {
+            var statusCode = res.status
+            return res.json()
+          })
+          .then((data) => {
+            ErrorResponse(data,"Chỉnh sửa thành công");
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+        }
       }
       else {
 
@@ -622,7 +645,7 @@ async function renderEmployeeData() {
  * Error handler while data is not valid to post to API by using error popup; 
  * Author: toanlk (15/12/2022)
  */
-function ErrorResponse(res) {
+function ErrorResponse(res,successMessage) {
   console.log(res);
   if (res != 1) {
     $(".popup-response-overlay").removeClass("display_none");
@@ -631,7 +654,7 @@ function ErrorResponse(res) {
   }
   else {
     $(".popup-response-overlay").removeClass("display_none");
-    $(".popup-response__main-text")[0].innerHTML = "thêm mới thành công";
+    $(".popup-response__main-text")[0].innerHTML = successMessage;
     $(".popup-response__main-icon-background").addClass("popup-response--success");
   }
 }
@@ -651,7 +674,8 @@ function ButtonClosePopUp(button,popUp) {
 
 function updateEmployeeButton(employeeId) { 
   $('#popupAddNewEmployee').removeClass("display_none");
-  $("#btnSaveEmployee").attr("onclick", "updateEmployeeSend()");
+  $("#btnSaveEmployee").attr("onclick", "btnSaveEvent(true,'"+employeeId +"')");
+  $(".addition__header--title")[0].innerHTML = "Chỉnh sửa Nhân Viên";
   console.log(employeeId);
 }
 /**
@@ -701,7 +725,6 @@ function showUpToolTip(hoverInObject, tooltip) {
     $(this).find(tooltip).removeClass("display_none");
   }, function () {
     $(this).find(tooltip).addClass("display_none");
-    
   });
 }
 
