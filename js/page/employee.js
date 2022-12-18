@@ -610,19 +610,25 @@ async function renderEmployeeData() {
                                                     <div style="display:none"
                                                         class="dropdown-list__list data-table__button-select-function">
                                                         <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Nhân Bản
-                                                            </span>
+                                                            <button class="reset-css-button">
+                                                              <span class="dropdown-list__list-item-text">
+                                                                  Nhân bản
+                                                              </span>
+                                                          </button>
+                                                        </div>
+                                                        <div class="dropdown-list__list-item"> 
+                                                          <button class="reset-css-button" onClick="deleteConfirmAction('${employee.EmployeeId}')">
+                                                              <span class="dropdown-list__list-item-text">
+                                                                  Xóa
+                                                              </span>
+                                                          </button>
                                                         </div>
                                                         <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Xóa
-                                                            </span>
-                                                        </div>
-                                                        <div class="dropdown-list__list-item">
-                                                            <span class="dropdown-list__list-item-text">
-                                                                Ngừng sử dụng
-                                                            </span>
+                                                            <button class="reset-css-button" >
+                                                              <span class="dropdown-list__list-item-text">
+                                                                  Ngưng sử dụng
+                                                              </span>
+                                                          </button>
                                                         </div>
 
                                                     </div>
@@ -632,13 +638,14 @@ async function renderEmployeeData() {
                                     </td>
                                 </tr>`;
     employeeHTMLItem += htmlSegment;
-  });
+  }); 
   let container = document.querySelector('.data-table__item-container');
   container.innerHTML = employeeHTMLItem;
   //fucntion will run after async fetch data finished
   checkboxClickAnimation();
   allCheckBoxEventExecute();
   DropdownShowAndHideFunctionalBar();
+  console.log(employees.length);
   disableToolBar(employees.length == 0);
 }
 /**
@@ -668,6 +675,7 @@ function ErrorResponse(res,successMessage) {
 function ButtonClosePopUp(button,popUp) {
   button.click(function () {
     popUp.addClass("display_none");
+    $(".popup-response__button-confirm--button").addClass("display_none");
   });
 
 }
@@ -734,3 +742,26 @@ function hideAllSidebarToolTip() {
   });
 }
 
+function deleteConfirmAction(employeeId) {
+  $(".popup-response-overlay").removeClass("display_none");
+    $(".popup-response__main-text")[0].innerHTML = "Bạn có muốn xóa nhân viên này";
+  $(".popup-response__main-icon-background").addClass("popup-response--question");
+  //confirm button
+  $(".popup-response__button-confirm--button").removeClass("display_none"); 
+  $(".popup-response__button-confirm--button").attr("onClick", "deleteAnEmployee('" + employeeId + "')");
+  $(".button__closePopup").removeClass("button__main");
+  $(".button__closePopup").addClass("button__semi");
+}
+function deleteAnEmployee(employeeId) {
+   $(".popup-response-overlay").addClass("display_none");
+  $(".popup-response__button-confirm--button").attr("onClick", "");
+  $(".popup-response__button-confirm--button").addClass("display_none"); 
+  $(".button__closePopup").addClass("button__main");
+  $(".button__closePopup").removeClass("button__semi");
+  fetch('https://amis.manhnv.net/api/v1/Employees/' + employeeId, {
+    method: 'DELETE',
+  })
+    .then(res => res.text()) 
+    .then(res => console.log(res))
+    .catch(err => console.log())
+}
